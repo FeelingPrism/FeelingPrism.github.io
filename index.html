@@ -139,7 +139,7 @@
         .photo-overlay {
             position: absolute;
             inset: 0;
-            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 60%);
+            background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 40%, transparent 80%);
             opacity: 0;
             transition: opacity 0.3s ease;
             display: flex;
@@ -308,7 +308,7 @@
                         <div class="max-w-2xl">
                             <span class="stat-label">IMAGE RECONNAISSANCE</span>
                             <h2 class="text-5xl md:text-7xl font-extrabold mt-4 text-gradient uppercase tracking-tight">Gallery</h2>
-                            <p class="text-slate-400 mt-6 leading-relaxed">Capturing the intersection of engineering and environment. My photography focuses on the technical details of hardware and the brutalist beauty of industrial design.</p>
+                            <p class="text-slate-400 mt-6 leading-relaxed">Capturing the intersection of engineering and environment. My photography focuses on technical details, industrial design, and structural brutalism.</p>
                         </div>
                         <div class="flex gap-4 mb-2">
                             <div class="px-6 py-3 rounded-full bg-blue-600/10 border border-blue-500/20 text-blue-400 text-[10px] font-bold uppercase tracking-widest">3rd Place Winner - 2024 Competition</div>
@@ -316,17 +316,16 @@
                     </div>
 
                     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                        <!-- Shot 1: Update the 'src' path once you upload to GitHub -->
+                        <!-- Row 1 -->
                         <div class="photo-grid-item group">
                             <div class="photo-overlay">
                                 <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest mb-1">HDR Engineering</span>
                                 <h4 class="text-lg font-bold text-white mb-2">Macro Hardware Analysis</h4>
-                                <p class="text-xs text-slate-300 leading-relaxed">Captured using manual exposure control to highlight silicon tracer routes.</p>
+                                <p class="text-xs text-slate-300 leading-relaxed">High-fidelity capture of PCB silicon tracer routes and capacitor geometry.</p>
                             </div>
                             <img src="images/shot1.jpg" onerror="this.src='https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=800'" alt="Macro Analysis">
                         </div>
 
-                        <!-- Shot 2 -->
                         <div class="photo-grid-item group">
                             <div class="photo-overlay">
                                 <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest mb-1">Landscape Optics</span>
@@ -336,34 +335,70 @@
                             <img src="images/shot2.jpg" onerror="this.src='https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&q=80&w=800'" alt="Atmospheric Depth">
                         </div>
 
-                        <!-- Shot 3 -->
                         <div class="photo-grid-item group">
                             <div class="photo-overlay">
                                 <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest mb-1">Industrial</span>
                                 <h4 class="text-lg font-bold text-white mb-2">Aviation Static Display</h4>
-                                <p class="text-xs text-slate-300 leading-relaxed">High-contrast capture of airframe structural rivets and fatigue patterns.</p>
+                                <p class="text-xs text-slate-300 leading-relaxed">Technical focus on airframe structural rivets and aerodynamic surface fatigue.</p>
                             </div>
                             <img src="images/shot3.jpg" onerror="this.src='https://images.unsplash.com/photo-1559297434-fae8a1916a79?auto=format&fit=crop&q=80&w=800'" alt="Aviation Shot">
                         </div>
 
-                        <!-- Shot 4 -->
+                        <!-- Row 2 -->
                         <div class="photo-grid-item group md:col-span-2 aspect-[16/9]">
                             <div class="photo-overlay">
                                 <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest mb-1">Experimental</span>
                                 <h4 class="text-lg font-bold text-white mb-2">Long Exposure Night Ops</h4>
-                                <p class="text-xs text-slate-300 leading-relaxed">Utilizing long-shutter hardware mods to capture light trails on industrial zones.</p>
+                                <p class="text-xs text-slate-300 leading-relaxed">Hardware-modded shutter control capturing kinetic energy in industrial sectors.</p>
                             </div>
                             <img src="images/shot4.jpg" onerror="this.src='https://images.unsplash.com/photo-1493238792040-d7141f15ef7e?auto=format&fit=crop&q=80&w=1200'" alt="Night Ops">
                         </div>
 
-                        <!-- Shot 5 -->
                         <div class="photo-grid-item group">
                             <div class="photo-overlay">
                                 <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest mb-1">Automotive Detail</span>
-                                <h4 class="text-lg font-bold text-white mb-2">Curb Weight Aesthetics</h4>
-                                <p class="text-xs text-slate-300 leading-relaxed">Detailed technical focus on Miata NA popup mechanism geometry.</p>
+                                <h4 class="text-lg font-bold text-white mb-2">Miata Geometry</h4>
+                                <p class="text-xs text-slate-300 leading-relaxed">Structural symmetry of the NA platform popup headlight mechanisms.</p>
                             </div>
                             <img src="images/shot5.jpg" onerror="this.src='https://images.unsplash.com/photo-1552519507-da3b142c6e3d?auto=format&fit=crop&q=80&w=800'" alt="Automotive Detail">
+                        </div>
+
+                        <!-- Row 3 (New Additions) -->
+                        <div class="photo-grid-item group">
+                            <div class="photo-overlay">
+                                <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest mb-1">Defense Tech</span>
+                                <h4 class="text-lg font-bold text-white mb-2">Armored Silhouette</h4>
+                                <p class="text-xs text-slate-300 leading-relaxed">MBT signature reduction analysis and multi-spectral camo patterns.</p>
+                            </div>
+                            <img src="images/shot6.jpg" onerror="this.src='https://images.unsplash.com/photo-1599059813005-11265ba4b4ce?auto=format&fit=crop&q=80&w=800'" alt="Defense Tech">
+                        </div>
+
+                        <div class="photo-grid-item group">
+                            <div class="photo-overlay">
+                                <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest mb-1">Aeronautics</span>
+                                <h4 class="text-lg font-bold text-white mb-2">Turbine Flow Dynamics</h4>
+                                <p class="text-xs text-slate-300 leading-relaxed">Detailed study of fan blade geometry and thermal resistant coating.</p>
+                            </div>
+                            <img src="images/shot7.jpg" onerror="this.src='https://images.unsplash.com/photo-1544725176-7c40e5a71c5e?auto=format&fit=crop&q=80&w=800'" alt="Turbine Study">
+                        </div>
+
+                        <div class="photo-grid-item group">
+                            <div class="photo-overlay">
+                                <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest mb-1">Mobile Modding</span>
+                                <h4 class="text-lg font-bold text-white mb-2">System Internals</h4>
+                                <p class="text-xs text-slate-300 leading-relaxed">Capturing the physical architecture of the Snapdragon thermal solution.</p>
+                            </div>
+                            <img src="images/shot8.jpg" onerror="this.src='https://images.unsplash.com/photo-1555664424-778a1e5e1b48?auto=format&fit=crop&q=80&w=800'" alt="Hardware Internals">
+                        </div>
+
+                        <!-- Final Feature Piece -->
+                        <div class="photo-grid-item group md:col-span-3 aspect-[21/9]">
+                            <div class="photo-overlay">
+                                <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest mb-1">Wide-Angle Recon</span>
+                                <h4 class="text-lg font-bold text-white mb-2">Industrial Brutalism</h4>
+                                <p class="text-xs text-slate-300 leading-relaxed">A panoramic analysis of structural integrity in modern industrial architecture.</p>
+                            </div>
+                            <img src="images/shot9.jpg" onerror="this.src='https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1600'" alt="Industrial Architecture">
                         </div>
                     </div>
 
