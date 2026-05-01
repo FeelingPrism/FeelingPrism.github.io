@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anvit Tengse</title>
+    <title>Anvit Tengse | Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
@@ -115,6 +115,32 @@
             background: #3b82f6;
             box-shadow: 0 0 10px #3b82f6;
         }
+
+        /* Photo specific styles */
+        .photo-grid-item {
+            aspect-ratio: 4/5;
+            overflow: hidden;
+            border-radius: 1.5rem;
+            position: relative;
+            background: #0f172a;
+            border: 1px solid var(--glass-border);
+        }
+
+        .photo-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8) 0%, transparent 60%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 1.5rem;
+        }
+
+        .photo-grid-item:hover .photo-overlay {
+            opacity: 1;
+        }
     </style>
 </head>
 <body>
@@ -126,9 +152,10 @@
                 <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center font-extrabold text-sm shadow-[0_0_15px_rgba(59,130,246,0.5)]">A</div>
                 <span class="font-extrabold text-sm tracking-widest uppercase">Anvit Tengse</span>
             </div>
-            <div class="hidden md:flex gap-12 items-center">
-                <span onclick="showPage('home')" id="nav-home" class="nav-link text-xs font-bold uppercase tracking-widest text-slate-400 hover:text-white active">Home</span>
+            <div class="hidden md:flex gap-10 items-center">
+                <span onclick="showPage('home')" id="nav-home" class="nav-link text-xs font-bold uppercase tracking-widest text-slate-400 hover:text-white">Home</span>
                 <span onclick="showPage('interests')" id="nav-interests" class="nav-link text-xs font-bold uppercase tracking-widest text-slate-400 hover:text-white">Interests</span>
+                <span onclick="showPage('photography')" id="nav-photography" class="nav-link text-xs font-bold uppercase tracking-widest text-slate-400 hover:text-white">Photography</span>
                 <a href="mailto:contact@anvittengse.com" class="text-xs font-bold uppercase tracking-widest text-blue-500 border border-blue-500/30 px-4 py-2 rounded-full hover:bg-blue-500/10 transition-all">Contact</a>
             </div>
         </div>
@@ -217,10 +244,10 @@
                             </div>
                             <h3 class="text-2xl font-bold mb-6">Mechanical Engineering & Lightweight Platforms</h3>
                             <p class="text-slate-400 leading-relaxed mb-6">
-                                Specialized technical analysis of the Mazda MX-5 NA and ND platforms. Research focuses on the original NA's weight-saving minimalism (940kg curb weight) versus the ND's modern Skyactiv-G engineering, specifically evaluating power-to-weight ratios and torque-sensing Limited Slip Differentials.
+                                Specialized technical analysis of the Mazda MX-5 NA and ND platforms. Research focuses on the original NA's weight-saving minimalism (940kg curb weight) versus the ND's modern Skyactiv-G engineering.
                             </p>
                             <p class="text-slate-400 leading-relaxed">
-                                Evaluating "Jinba Ittai" principles through 50/50 weight distribution, center-of-gravity optimization, and the mechanical advantages of double-wishbone versus multilink suspension geometry in high-performance roadsters.
+                                Evaluating "Jinba Ittai" principles through 50/50 weight distribution, center-of-gravity optimization, and the mechanical advantages of double-wishbone suspension.
                             </p>
                         </div>
 
@@ -232,14 +259,14 @@
                             </div>
                             <h3 class="text-2xl font-bold mb-6">Armored Vehicle Survivability</h3>
                             <p class="text-slate-400 leading-relaxed mb-6">
-                                Comparative study of modern Main Battle Tank (MBT) architecture. Focused on the survivability profiles of the T-90MS and Type 99A, specifically evaluating the integration of Explosive Reactive Armor (ERA) against APFSDS kinetic energy penetrators.
+                                Comparative study of modern Main Battle Tank (MBT) architecture. Focused on the survivability profiles of the T-90MS and Type 99A against APFSDS penetrators.
                             </p>
                             <p class="text-slate-400 leading-relaxed">
-                                Analysis extends to Active Protection System (APS) hard-kill interception logic, multi-spectral camouflage for signature reduction, and the role of fire-control systems in modern asymmetrical combat theaters.
+                                Analysis extends to Active Protection System (APS) hard-kill interception logic and multi-spectral camouflage for signature reduction.
                             </p>
                         </div>
 
-                        <!-- Modding/Hardware Card -->
+                        <!-- Modding Card -->
                         <div class="content-card p-12 rounded-[2.5rem]">
                             <div class="flex justify-between items-start mb-10">
                                 <div class="w-14 h-14 bg-purple-500/10 rounded-2xl flex items-center justify-center text-purple-500"><i data-lucide="cpu" class="w-8 h-8"></i></div>
@@ -247,39 +274,120 @@
                             </div>
                             <h3 class="text-2xl font-bold mb-6">Mobile Computing & Kernel Development</h3>
                             <p class="text-slate-400 leading-relaxed mb-6">
-                                Specialized in Android hardware optimization and low-level system architecture. Proficient in bootloader unlocking and the deployment of AOSP-based ROMs to bypass manufacturer-imposed performance throttles and data telemetry.
+                                Specialized in Android hardware optimization and low-level system architecture. Tuning Snapdragon 8 Gen 3 architectures via custom kernels.
                             </p>
                             <p class="text-slate-400 leading-relaxed">
-                                Tuning Snapdragon architectures (8 Gen 3 / 730) via custom kernels to optimize thermal governors, CPU voltage offsets, and instruction throughput on OnePlus and Xiaomi Mi platforms to maximize computational efficiency.
+                                Deploying AOSP-based ROMs on OnePlus/Xiaomi to maximize computational efficiency and bypass thermal throttles.
                             </p>
                         </div>
 
-                        <!-- Photography Card -->
+                        <!-- Photography Card (Link to Photography page) -->
                         <div class="content-card p-12 rounded-[2.5rem]">
                             <div class="flex justify-between items-start mb-10">
                                 <div class="w-14 h-14 bg-orange-500/10 rounded-2xl flex items-center justify-center text-orange-500"><i data-lucide="camera" class="w-8 h-8"></i></div>
                                 <span class="tag bg-orange-500/10 text-orange-400 border border-orange-500/20">Visual Arts</span>
                             </div>
                             <h3 class="text-2xl font-bold mb-6">Technical Mobile Photography</h3>
-                            <p class="text-slate-400 leading-relaxed mb-6">
-                                Utilizing advanced mobile sensor technology to capture high-dynamic-range (HDR) subjects in engineering and landscape photography. Specialized focus on manual exposure control, ISO management, and post-processing color science for technical clarity.
+                            <p class="text-slate-400 leading-relaxed mb-8">
+                                Utilizing advanced mobile sensor technology to capture high-dynamic-range (HDR) subjects. Focus on manual exposure and color science.
                             </p>
-                            <div class="flex items-center gap-4 p-5 rounded-2xl bg-orange-500/5 border border-orange-500/10">
-                                <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-orange-500/20 flex items-center justify-center text-orange-400 font-extrabold text-lg">3rd</div>
-                                <p class="text-xs font-bold text-slate-300 leading-relaxed uppercase tracking-wider">Awarded 3rd Place in the Annual Photography Competition for exceptional technical composition and light management.</p>
+                            <button onclick="showPage('photography')" class="w-full py-4 border border-orange-500/20 rounded-xl bg-orange-500/5 text-orange-400 text-xs font-bold uppercase tracking-widest hover:bg-orange-500/10 transition-all flex items-center justify-center gap-2">
+                                Launch Gallery <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+            `,
+            photography: `
+                <section class="page-fade py-20 px-8 max-w-6xl mx-auto">
+                    <div class="flex flex-col md:flex-row justify-between items-end gap-8 mb-20">
+                        <div class="max-w-2xl">
+                            <span class="stat-label">IMAGE RECONNAISSANCE</span>
+                            <h2 class="text-5xl md:text-7xl font-extrabold mt-4 text-gradient uppercase tracking-tight">Gallery</h2>
+                            <p class="text-slate-400 mt-6 leading-relaxed">Capturing the intersection of engineering and environment. My photography focuses on the technical details of hardware and the brutalist beauty of industrial design.</p>
+                        </div>
+                        <div class="flex gap-4 mb-2">
+                            <div class="px-6 py-3 rounded-full bg-blue-600/10 border border-blue-500/20 text-blue-400 text-[10px] font-bold uppercase tracking-widest">3rd Place Winner - 2024 Competition</div>
+                        </div>
+                    </div>
+
+                    <!-- Photography Grid -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <!-- Technical Shot 1 -->
+                        <div class="photo-grid-item group">
+                            <div class="photo-overlay">
+                                <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest mb-1">HDR Engineering</span>
+                                <h4 class="text-lg font-bold text-white mb-2">Macro Hardware Analysis</h4>
+                                <p class="text-xs text-slate-300 leading-relaxed">Captured using manual exposure control to highlight silicon tracer routes.</p>
+                            </div>
+                            <!-- You can replace this div with an <img> tag later -->
+                            <div class="w-full h-full flex items-center justify-center bg-slate-900">
+                                <i data-lucide="image" class="w-12 h-12 text-slate-800"></i>
                             </div>
                         </div>
 
-                        <!-- Simulation Card -->
-                        <div class="content-card p-12 rounded-[2.5rem] md:col-span-2">
-                            <div class="flex justify-between items-start mb-10">
-                                <div class="w-14 h-14 bg-emerald-500/10 rounded-2xl flex items-center justify-center text-emerald-500"><i data-lucide="target" class="w-8 h-8"></i></div>
-                                <span class="tag bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">Simulations</span>
+                        <!-- Technical Shot 2 -->
+                        <div class="photo-grid-item group">
+                            <div class="photo-overlay">
+                                <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest mb-1">Landscape Optics</span>
+                                <h4 class="text-lg font-bold text-white mb-2">Atmospheric Depth</h4>
+                                <p class="text-xs text-slate-300 leading-relaxed">Testing sensor latitude during golden hour for wide-range luminance.</p>
                             </div>
-                            <h3 class="text-2xl font-bold mb-6">Applied Physics Simulations</h3>
-                            <p class="text-slate-400 leading-relaxed mb-0">
-                                Utilizing high-fidelity simulation environments including War Thunder and Forza Horizon as virtual laboratories for observing real-world mechanical behavior. Key research areas involve ballistic penetration physics (KE vs CE), aerodynamic drag coefficients on varied airframe geometries, and the analysis of suspension travel under dynamic G-loading during high-speed maneuvers. This practical observation bridges the gap between theoretical physics and mechanical application, allowing for rapid iteration in CAD design.
-                            </p>
+                            <div class="w-full h-full flex items-center justify-center bg-slate-900">
+                                <i data-lucide="image" class="w-12 h-12 text-slate-800"></i>
+                            </div>
+                        </div>
+
+                        <!-- Technical Shot 3 -->
+                        <div class="photo-grid-item group">
+                            <div class="photo-overlay">
+                                <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest mb-1">Industrial</span>
+                                <h4 class="text-lg font-bold text-white mb-2">Aviation Static Display</h4>
+                                <p class="text-xs text-slate-300 leading-relaxed">High-contrast capture of airframe structural rivets and fatigue patterns.</p>
+                            </div>
+                            <div class="w-full h-full flex items-center justify-center bg-slate-900">
+                                <i data-lucide="image" class="w-12 h-12 text-slate-800"></i>
+                            </div>
+                        </div>
+
+                        <!-- Technical Shot 4 -->
+                        <div class="photo-grid-item group md:col-span-2 aspect-[16/9]">
+                            <div class="photo-overlay">
+                                <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest mb-1">Experimental</span>
+                                <h4 class="text-lg font-bold text-white mb-2">Long Exposure Night Ops</h4>
+                                <p class="text-xs text-slate-300 leading-relaxed">Utilizing long-shutter hardware mods to capture light trails on industrial zones.</p>
+                            </div>
+                            <div class="w-full h-full flex items-center justify-center bg-slate-900">
+                                <i data-lucide="image" class="w-12 h-12 text-slate-800"></i>
+                            </div>
+                        </div>
+
+                        <!-- Technical Shot 5 -->
+                        <div class="photo-grid-item group">
+                            <div class="photo-overlay">
+                                <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest mb-1">Automotive Detail</span>
+                                <h4 class="text-lg font-bold text-white mb-2">Curb Weight Aesthetics</h4>
+                                <p class="text-xs text-slate-300 leading-relaxed">Detailed technical focus on Miata NA popup mechanism geometry.</p>
+                            </div>
+                            <div class="w-full h-full flex items-center justify-center bg-slate-900">
+                                <i data-lucide="image" class="w-12 h-12 text-slate-800"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tech Spec Bar -->
+                    <div class="mt-12 p-8 border border-white/5 bg-white/[0.02] rounded-[2rem] flex flex-wrap gap-12 justify-center">
+                        <div class="text-center">
+                            <span class="stat-label block mb-2">Primary Lens</span>
+                            <span class="text-sm font-bold text-slate-300">f/1.6 Wide-Angle Optics</span>
+                        </div>
+                        <div class="text-center">
+                            <span class="stat-label block mb-2">Capture Mode</span>
+                            <span class="text-sm font-bold text-slate-300">RAW / 10-bit HDR</span>
+                        </div>
+                        <div class="text-center">
+                            <span class="stat-label block mb-2">Workflow</span>
+                            <span class="text-sm font-bold text-slate-300">Technical Post-Processing</span>
                         </div>
                     </div>
                 </section>
@@ -288,18 +396,30 @@
 
         function showPage(pageId) {
             const contentDiv = document.getElementById('page-content');
-            contentDiv.innerHTML = pages[pageId];
-            lucide.createIcons();
-            document.querySelectorAll('.nav-link').forEach(link => {
-                link.classList.remove('active', 'text-white');
-                link.classList.add('text-slate-400');
-            });
-            const activeLink = document.getElementById(`nav-${pageId}`);
-            if (activeLink) {
-                activeLink.classList.add('active', 'text-white');
-                activeLink.classList.remove('text-slate-400');
-            }
-            window.scrollTo(0, 0);
+            
+            // Fade out
+            contentDiv.style.opacity = '0';
+            
+            setTimeout(() => {
+                contentDiv.innerHTML = pages[pageId];
+                lucide.createIcons();
+                
+                // Update navigation
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.classList.remove('active', 'text-white');
+                    link.classList.add('text-slate-400');
+                });
+                
+                const activeLink = document.getElementById(`nav-${pageId}`);
+                if (activeLink) {
+                    activeLink.classList.add('active', 'text-white');
+                    activeLink.classList.remove('text-slate-400');
+                }
+                
+                // Fade in
+                contentDiv.style.opacity = '1';
+                window.scrollTo(0, 0);
+            }, 150);
         }
 
         window.onload = () => showPage('home');
