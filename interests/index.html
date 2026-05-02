@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anvit Tengse - Interests</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        :root {
+            --bg-deep: #020408;
+            --accent-sapphire: #3b82f6;
+            --glass-border: rgba(255, 255, 255, 0.08);
+        }
+
+        * { scroll-behavior: smooth; }
+
+        body {
+            background-color: var(--bg-deep);
+            background: 
+                radial-gradient(circle at 50% -20%, rgba(59, 130, 246, 0.12) 0%, transparent 50%),
+                radial-gradient(circle at 0% 100%, rgba(30, 58, 138, 0.08) 0%, transparent 40%),
+                var(--bg-deep);
+            color: #ffffff;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            letter-spacing: -0.02em;
+            overflow-x: hidden;
+             Franco-min-height: 100vh;
+        }
+
+        .nav-blur {
+            backdrop-filter: blur(24px);
+            background: rgba(2, 4, 8, 0.8);
+            border-bottom: 1px solid var(--glass-border);
+        }
+
+        .content-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(12px);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .content-card:hover {
+            background: rgba(255, 255, 255, 0.04);
+            border-color: rgba(59, 130, 246, 0.4);
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .stat-label {
+            font-size: 0.65rem;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: #64748b;
+            font-weight: 800;
+        }
+
+        .text-gradient {
+            background: linear-gradient(180deg, #FFFFFF 30%, #94A3B8 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .premium-btn {
+            background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+            box-shadow: 0 4px 20px rgba(59, 130, 246, 0.3);
+            transition: all 0.3s ease;
+        }
+
+        .premium-btn:hover {
+            transform: scale(1.02);
+            box-shadow: 0 8px 30px rgba(59, 130, 246, 0.5);
+        }
+
+        .tag {
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 4px 10px;
+            border-radius: 6px;
+            background: rgba(59, 130, 246, 0.1);
+            color: #60a5fa;
+            text-transform: uppercase;
+        }
+
+        .page-fade {
+            animation: fadeIn 0.6s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .nav-link {
+            cursor: pointer;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .nav-link.active {
+            color: #3b82f6;
+        }
+
+        .nav-link.active::after {
+            content: '';
+            position: absolute;
+            bottom: -31px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: #3b82f6;
+            box-shadow: 0 0 10px #3b82f6;
+        }
+
+        .photo-grid-item {
+            aspect-ratio: 4/5;
+            overflow: hidden;
+            border-radius: 1.5rem;
+            position: relative;
+            background: #0f172a;
+            border: 1px solid var(--glass-border);
+        }
+
+        .photo-grid-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .photo-grid-item:hover img {
+            transform: scale(1.08);
+        }
+
+        .photo-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 40%, transparent 80%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 1.5rem;
+            z-index: 10;
+        }
+
+        .photo-grid-item:hover .photo-overlay {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-[100] nav-blur">
+        <div class="max-w-6xl mx-auto px-8 h-20 flex justify-between items-center">
+            <a href="/" class="flex items-center gap-3 cursor-pointer">
+                <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center font-extrabold text-sm shadow-[0_0_15px_rgba(59,130,246,0.5)]">A</div>
+                <span class="font-extrabold text-sm tracking-widest uppercase text-white">Anvit Tengse</span>
+            </a>
+            <div class="hidden md:flex gap-10 items-center">
+                <a href="/" class="nav-link text-xs font-bold uppercase tracking-widest text-slate-400 hover:text-white">Home</a>
+                <a href="/interests/" class="nav-link active text-xs font-bold uppercase tracking-widest text-white">Interests</a>
+                <a href="/photography/" class="nav-link text-xs font-bold uppercase tracking-widest text-slate-400 hover:text-white">Photography</a>
+                <a href="mailto:contact@anvittengse.com" class="text-xs font-bold uppercase tracking-widest text-blue-500 border border-blue-500/30 px-4 py-2 rounded-full hover:bg-blue-500/10 transition-all">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="pt-20">
+        <!-- Main Content -->
+        <section class="page-fade py-20 px-8 max-w-6xl mx-auto">
+            <div class="mb-20 text-center">
+                <span class="stat-label">ANVIT TENGSE</span>
+                <h2 class="text-5xl md:text-7xl font-extrabold mt-4 text-gradient uppercase tracking-tight">My Interests</h2>
+                <p class="text-slate-400 mt-6 max-w-2xl mx-auto">Detailed technical analysis of mechanical systems, defense technology, and hardware-software integration.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="content-card p-12 rounded-[2.5rem]">
+                    <div class="flex justify-between items-start mb-10">
+                        <div class="w-14 h-14 bg-blue-500/10 rounded-2xl flex items-center justify-center text-blue-500"><i data-lucide="car" class="w-8 h-8"></i></div>
+                        <span class="tag">Automotive</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-6">Mechanical Engineering & Lightweight Platforms</h3>
+                    <p class="text-slate-400 leading-relaxed mb-6">
+                        Specialized technical analysis of the Mazda MX-5 NA and ND platforms. Research focuses on the original NA's weight-saving minimalism (940kg curb weight) versus the ND's modern Skyactiv-G engineering.
+                    </p>
+                    <p class="text-slate-400 leading-relaxed">
+                        Evaluating "Jinba Ittai" principles through 50/50 weight distribution, center-of-gravity optimization, and the mechanical advantages of double-wishbone suspension.
+                    </p>
+                </div>
+
+                <div class="content-card p-12 rounded-[2.5rem]">
+                    <div class="flex justify-between items-start mb-10">
+                        <div class="w-14 h-14 bg-red-500/10 rounded-2xl flex items-center justify-center text-red-500"><i data-lucide="shield" class="w-8 h-8"></i></div>
+                        <span class="tag bg-red-500/10 text-red-400 border border-red-500/20">Military Tech</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-6">Armored Vehicle Survivability</h3>
+                    <p class="text-slate-400 leading-relaxed mb-6">
+                        Comparative study of modern Main Battle Tank (MBT) architecture. Focused on the survivability profiles of the T-90MS and Type 99A against APFSDS penetrators.
+                    </p>
+                    <p class="text-slate-400 leading-relaxed">
+                        Analysis extends to Active Protection System (APS) hard-kill interception logic and multi-spectral camouflage for signature reduction.
+                    </p>
+                </div>
+
+                <div class="content-card p-12 rounded-[2.5rem]">
+                    <div class="flex justify-between items-start mb-10">
+                        <div class="w-14 h-14 bg-purple-500/10 rounded-2xl flex items-center justify-center text-purple-500"><i data-lucide="cpu" class="w-8 h-8"></i></div>
+                        <span class="tag bg-purple-500/10 text-purple-400 border border-purple-500/20">Hardware Optimization</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-6">Mobile Computing & Kernel Development</h3>
+                    <p class="text-slate-400 leading-relaxed mb-6">
+                        Specialized in Android hardware optimization and low-level system architecture. Tuning Snapdragon 8 Gen 3 architectures via custom kernels.
+                    </p>
+                    <p class="text-slate-400 leading-relaxed">
+                        Deploying AOSP-based ROMs on OnePlus/Xiaomi to maximize computational efficiency and bypass thermal throttles.
+                    </p>
+                </div>
+
+                <div class="content-card p-12 rounded-[2.5rem]">
+                    <div class="flex justify-between items-start mb-10">
+                        <div class="w-14 h-14 bg-orange-500/10 rounded-2xl flex items-center justify-center text-orange-500"><i data-lucide="camera" class="w-8 h-8"></i></div>
+                        <span class="tag bg-orange-500/10 text-orange-400 border border-orange-500/20">Visual Arts</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-6">Technical Mobile Photography</h3>
+                    <p class="text-slate-400 leading-relaxed mb-8">
+                        Utilizing advanced mobile sensor technology to capture high-dynamic-range (HDR) subjects. Focus on manual exposure and color science.
+                    </p>
+                    <a href="photography.html" class="w-full py-4 border border-orange-500/20 rounded-xl bg-orange-500/5 text-orange-400 text-xs font-bold uppercase tracking-widest hover:bg-orange-500/10 transition-all flex items-center justify-center gap-2">
+                        Launch Gallery <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer class="py-20 px-8 border-t border-white/5 bg-[#010204]">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex items-center gap-3">
+                <div class="w-6 h-6 bg-blue-600/20 rounded flex items-center justify-center font-bold text-[10px] text-blue-500">A</div>
+                <span class="text-[10px] font-bold tracking-[0.3em] uppercase text-slate-500">Anvit Tengse // M . M . XXVI</span>
+            </div>
+            <div class="flex gap-10">
+                <i data-lucide="github" class="w-5 h-5 text-slate-600 hover:text-white cursor-pointer transition-colors"></i>
+                <i data-lucide="instagram" class="w-5 h-5 text-slate-600 hover:text-white cursor-pointer transition-colors"></i>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>
