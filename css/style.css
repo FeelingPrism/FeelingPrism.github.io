@@ -101,3 +101,55 @@ body {
     from { opacity: 0; transform: translateY(20px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
+/* =========================================
+   Photography Section Logic (FIX APPLIED)
+   ========================================= */
+.photo-grid-item {
+    /* Tailwind will handle the grid column spans, but we 
+       need these for the overlay positioning */
+    position: relative;
+    overflow: hidden;
+    border-radius: 1.5rem;
+    background: #0f172a; /* Fallback before image loads */
+    border: 1px solid var(--glass-border);
+}
+
+/* Image zoom effect on hover */
+.photo-grid-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.photo-grid-item:hover img {
+    transform: scale(1.08);
+}
+
+/* Overlay Styling */
+.photo-overlay {
+    position: absolute;
+    inset: 0;
+    /* Create the dark gradient fade from bottom to top */
+    background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.4) 40%, transparent 80%);
+    
+    /* 1. HIDE BY DEFAULT */
+    opacity: 0; 
+    
+    /* Smooth fade in/out */
+    transition: opacity 0.4s ease;
+    
+    /* Alignment of text */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 1.5rem;
+    z-index: 10;
+}
+
+/* 2. SHOW ON HOVER */
+/* Specifically targets the overlay when the PARENT is hovered */
+.photo-grid-item:hover .photo-overlay {
+    opacity: 1;
+}
