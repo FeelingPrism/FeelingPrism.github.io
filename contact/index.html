@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anvit Tengse - Contact</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <nav class="fixed top-0 w-full z-[100] nav-blur">
+        <div class="max-w-6xl mx-auto px-8 h-20 flex justify-between items-center">
+            <a href="/" class="flex items-center gap-3">
+                <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center font-extrabold text-sm shadow-[0_0_15px_rgba(59,130,246,0.5)]">A</div>
+                <span class="font-extrabold text-sm tracking-widest uppercase text-white">Anvit Tengse</span>
+            </a>
+            <div class="hidden md:flex gap-10 items-center">
+                <a href="/" class="nav-link text-xs font-bold uppercase tracking-widest text-slate-400 hover:text-white">Home</a>
+                <a href="/interests/" class="nav-link text-xs font-bold uppercase tracking-widest text-slate-400 hover:text-white">Interests</a>
+                <a href="/projects/" class="nav-link text-xs font-bold uppercase tracking-widest text-slate-400 hover:text-white">Projects</a>
+                <a href="/photography/" class="nav-link text-xs font-bold uppercase tracking-widest text-slate-400 hover:text-white">Photography</a>
+                <a href="mailto:anvit.tengse.business@gmail.com" class="text-xs font-bold uppercase tracking-widest text-blue-500 border border-blue-500/30 px-4 py-2 rounded-full bg-blue-500/5 transition-all">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-32 pb-20 px-8 max-w-6xl mx-auto page-fade">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            
+            <div>
+                <span class="stat-label">CONTACT ME</span>
+                <h2 class="text-5xl md:text-6xl font-extrabold mt-4 text-gradient uppercase tracking-tight mb-8">Let's Connect</h2>
+
+                <div class="space-y-8">
+                    <div class="flex items-center gap-6 group">
+                        <div class="w-12 h-12 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center text-blue-500 group-hover:border-blue-500/50 transition-all">
+                            <i data-lucide="mail" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <p class="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-1">Direct Email</p>
+                            <a href="mailto:anvit.tengse.business@gmail.com" class="text-white hover:text-blue-400 transition-colors">anvit.tengse.business@gmail.com</a>
+                        </div>
+                    </div>
+
+                    <div class="flex items-center gap-6 group">
+                        <div class="w-12 h-12 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center text-blue-500">
+                            <i data-lucide="map-pin" class="w-5 h-5"></i>
+                        </div>
+                        <div>
+                            <p class="text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-1">Location</p>
+                            <p class="text-white">London, UK</p>
+                        </div>
+                    </div>
+
+                    <div class="flex gap-4 pt-4">
+                        <a href="#" class="w-12 h-12 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center hover:bg-blue-600/20 hover:border-blue-500 transition-all">
+                            <i data-lucide="github" class="w-5 h-5"></i>
+                        </a>
+                        <a href="#" class="w-12 h-12 bg-white/5 border border-white/10 rounded-xl flex items-center justify-center hover:bg-blue-600/20 hover:border-blue-500 transition-all">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-card p-8 md:p-12 rounded-[2.5rem]">
+                <form action="https://formspree.io/f/mgodrqyy" method="POST" class="space-y-6">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="text-[10px] font-bold text-slate-500 uppercase tracking-widest block mb-3 ml-1">Full Name</label>
+                            <input type="text" name="name" required placeholder="Your Name" class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-blue-500/50 transition-all text-white">
+                        </div>
+                        <div>
+                            <label class="text-[10px] font-bold text-slate-500 uppercase tracking-widest block mb-3 ml-1">Email Address</label>
+                            <input type="email" name="email" required placeholder="email@example.com" class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-blue-500/50 transition-all text-white">
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <label class="text-[10px] font-bold text-slate-500 uppercase tracking-widest block mb-3 ml-1">Subject</label>
+                        <select name="subject" class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-blue-500/50 transition-all text-white appearance-none">
+                            <option value="General Inquiry" class="bg-slate-900">General Inquiry</option>
+                            <option value="Project Collaboration" class="bg-slate-900">Project Collaboration</option>
+                            <option value="Technical Question" class="bg-slate-900">Technical Question</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="text-[10px] font-bold text-slate-500 uppercase tracking-widest block mb-3 ml-1">Message</label>
+                        <textarea name="message" required rows="5" placeholder="How can I help?" class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-blue-500/50 transition-all text-white resize-none"></textarea>
+                    </div>
+
+                    <button type="submit" class="premium-btn w-full py-5 rounded-2xl font-bold uppercase tracking-widest text-sm transition-all flex items-center justify-center gap-3">
+                        Send Message <i data-lucide="send" class="w-4 h-4"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+\
+    <footer class="py-10 px-8 border-t border-white/5 text-center">
+        <span class="text-[10px] font-bold tracking-[0.3em] uppercase text-slate-600">Anvit Tengse // Contact Me</span>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
