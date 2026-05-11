@@ -103,11 +103,9 @@ body {
 }
 
 /* =========================================
-   Photography Section Logic (FIX APPLIED)
+   Photography Section Logic
    ========================================= */
 .photo-grid-item {
-    /* Tailwind will handle the grid column spans, but we 
-       need these for the overlay positioning */
     position: relative;
     overflow: hidden;
     border-radius: 1.5rem;
@@ -149,7 +147,6 @@ body {
 }
 
 /* 2. SHOW ON HOVER */
-/* Specifically targets the overlay when the PARENT is hovered */
 .photo-grid-item:hover .photo-overlay {
     opacity: 1;
 }
