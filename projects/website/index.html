@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anvit Tengse - Infrastructure Timeline</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body class="page-fade">
+
+    <nav class="fixed top-0 w-full z-[100] nav-blur">
+        <div class="max-w-6xl mx-auto px-8 h-20 flex justify-between items-center">
+            <a href="/" class="flex items-center gap-3">
+                <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center font-extrabold text-sm shadow-[0_0_15px_rgba(59,130,246,0.5)]">A</div>
+                <span class="font-extrabold text-sm tracking-widest uppercase text-white">Project Log</span>
+            </a>
+            <div class="hidden md:flex gap-10 items-center">
+                <a href="/" class="nav-link text-xs font-bold uppercase tracking-widest text-slate-400">Home</a>
+                <a href="/projects/" class="nav-link active text-xs font-bold uppercase tracking-widest text-white">Projects</a>
+                <a href="/contact/" class="text-xs font-bold uppercase tracking-widest text-blue-500 border border-blue-500/30 px-4 py-2 rounded-full bg-blue-500/5">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-32 pb-20 px-8 max-w-4xl mx-auto">
+        <div class="mb-20 text-center">
+            <span class="stat-label">Development Sortie</span>
+            <h1 class="text-5xl md:text-6xl font-extrabold mt-4 text-gradient uppercase tracking-tight">Project Timeline</h1>
+            <p class="mt-6 text-slate-400 leading-relaxed">
+                Documenting the evolution from proprietary constraints to a decoupled, high-performance architecture.
+            </p>
+        </div>
+
+        <div class="relative border-l border-white/10 ml-4 md:ml-0 md:left-1/2">
+            
+            <div class="mb-16 relative pl-8 md:pl-0">
+                <div class="absolute -left-[9px] top-0 w-4 h-4 bg-red-500 rounded-full border-4 border-[#020408] shadow-[0_0_10px_rgba(239,68,68,0.5)]"></div>
+                
+                <div class="md:w-1/2 md:pr-12 md:text-right">
+                    <span class="stat-label text-red-500">Phase 01 // Discovery</span>
+                    <h3 class="text-xl font-bold text-white uppercase mt-2">IONOS CMS Deployment</h3>
+                    <p class="mt-3 text-sm text-slate-400 leading-relaxed">
+                        Initial build using IONOS Website Builder. Identified critical limitations: proprietary software locks blocked custom <span class="text-white">Tailwind CSS</span> injection and third-party API integration. The environment was deemed unfit for professional engineering requirements.
+                    </p>
+                </div>
+            </div>
+
+            <div class="mb-16 relative pl-8 md:pl-0">
+                <div class="absolute -left-[9px] top-0 w-4 h-4 bg-blue-600 rounded-full border-4 border-[#020408] shadow-[0_0_10px_rgba(59,130,246,0.5)]"></div>
+                
+                <div class="md:w-1/2 md:ml-auto md:pl-12">
+                    <span class="stat-label text-blue-500">Phase 02 // Re-Engineering</span>
+                    <h3 class="text-xl font-bold text-white uppercase mt-2">DNS Migration & Decoupling</h3>
+                    <p class="mt-3 text-sm text-slate-400 leading-relaxed">
+                        Strategically decoupled the domain from IONOS hosting. Reconfigured <span class="text-white font-mono">A-Records</span> and <span class="text-white font-mono">CNAME</span> to point toward GitHub's distributed servers. This enabled full autonomy over the codebase.
+                    </p>
+                </div>
+            </div>
+
+            <div class="mb-16 relative pl-8 md:pl-0">
+                <div class="absolute -left-[9px] top-0 w-4 h-4 bg-blue-600 rounded-full border-4 border-[#020408] shadow-[0_0_10px_rgba(59,130,246,0.5)]"></div>
+                
+                <div class="md:w-1/2 md:pr-12 md:text-right">
+                    <span class="stat-label text-blue-500">Phase 03 // Production</span>
+                    <h3 class="text-xl font-bold text-white uppercase mt-2">Tailwind & AJAX Integration</h3>
+                    <p class="mt-3 text-sm text-slate-400 leading-relaxed">
+                        Developed a custom UI using a <span class="text-white">Bento Grid</span> architecture. Engineered an asynchronous data pipeline using the <span class="text-white font-mono">Fetch API</span> to handle contact submissions without browser redirects.
+                    </p>
+                </div>
+            </div>
+
+            <div class="mb-16 relative
