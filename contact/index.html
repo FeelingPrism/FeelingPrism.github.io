@@ -58,7 +58,9 @@
             </div>
 
             <div class="content-card p-8 md:p-12 rounded-[2.5rem]">
-                <form action="https://formspree.io/f/mgodrqyy" method="POST" class="space-y-6">
+                <form id="contact-form" class="space-y-6">
+                    <input type="hidden" name="access_key" value="31ca0f95-706d-401b-a473-0db66e8918e3">
+                    
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <label class="text-[10px] font-bold text-slate-500 uppercase tracking-widest block mb-3 ml-1">Full Name</label>
@@ -75,9 +77,11 @@
                         <textarea name="message" required rows="5" placeholder="How can I help?" class="w-full bg-white/5 border border-white/10 rounded-2xl px-6 py-4 outline-none focus:border-blue-500/50 transition-all text-white resize-none"></textarea>
                     </div>
 
-                    <button type="submit" class="premium-btn w-full py-5 rounded-2xl font-bold uppercase tracking-widest text-sm transition-all flex items-center justify-center gap-3">
-                        Send Message <i data-lucide="send" class="w-4 h-4"></i>
+                    <button type="submit" id="submit-btn" class="premium-btn w-full py-5 rounded-2xl font-bold uppercase tracking-widest text-sm transition-all flex items-center justify-center gap-3">
+                        <span id="btn-text">Send Message</span> <i data-lucide="send" class="w-4 h-4"></i>
                     </button>
+
+                    <p id="form-result" class="hidden text-center text-[10px] font-bold uppercase tracking-widest mt-4"></p>
                 </form>
             </div>
         </div>
@@ -89,6 +93,64 @@
 
     <script>
         lucide.createIcons();
+
+        const form = document.getElementById('contact-form');
+        const result = document.getElementById('form-result');
+        const btnText = document.getElementById('btn-text');
+        const submitBtn = document.getElementById('submit-btn');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Visual feedback: Start
+            btnText.innerText = "Processing...";
+            submitBtn.disabled = true;
+            submitBtn.style.opacity = "0.5";
+
+            const formData = new FormData(form);
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
+            .then(async (response) => {
+                let jsonResponse = await response.json();
+                if (response.status == 200) {
+                    result.innerHTML = "Message Sent Successfully";
+                    result.classList.remove("hidden", "text-red-500");
+                    result.classList.add("text-emerald-500");
+                    form.reset();
+                } else {
+                    console.error(response);
+                    result.innerHTML = jsonResponse.message || "Submission failed";
+                    result.classList.remove("hidden", "text-emerald-500");
+                    result.classList.add("text-red-500");
+                }
+            })
+            .catch(error => {
+                console.error(error);
+                result.innerHTML = "Something went wrong!";
+                result.classList.remove("hidden");
+                result.classList.add("text-red-500");
+            })
+            .then(function() {
+                // Visual feedback: End
+                btnText.innerText = "Send Message";
+                submitBtn.disabled = false;
+                submitBtn.style.opacity = "1";
+                
+                // Hide success message after 5 seconds to keep the UI clean
+                setTimeout(() => {
+                    result.classList.add("hidden");
+                }, 5000);
+            });
+        });
     </script>
 </body>
 </html>
