@@ -21,12 +21,12 @@
         }
     </style>
 </head>
-<body class="page-fade bg-[#050505]">
+<body class="bg-[#050505] text-white">
 
-    <nav class="fixed top-0 w-full z-[100] nav-blur">
+    <nav class="fixed top-0 left-0 w-full z-[999] bg-[#050505]/80 backdrop-blur-md border-b border-white/5">
         <div class="max-w-6xl mx-auto px-8 h-20 flex justify-between items-center">
             <a href="/" class="flex items-center gap-3 cursor-pointer">
-                <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center font-extrabold text-sm shadow-[0_0_15px_rgba(59,130,246,0.5)]">A</div>
+                <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center font-extrabold text-sm shadow-[0_0_15px_rgba(59,130,246,0.5)] text-white">A</div>
                 <span class="font-extrabold text-sm tracking-widest uppercase text-white">Anvit Tengse</span>
             </a>
             <div class="hidden md:flex gap-10 items-center">
@@ -39,12 +39,12 @@
         </div>
     </nav>
 
-    <div class="nav-spacing">
+    <main class="nav-spacing page-fade">
         <section class="py-20 px-8 max-w-4xl mx-auto">
             <div class="mb-20">
-                <span class="stat-label">Projects</span>
-                <h2 class="text-5xl md:text-7xl font-extrabold mt-4 text-gradient uppercase tracking-tight">My Website</h2>
-                <p class="text-slate-400 mt-6 max-w-2xl">
+                <span class="stat-label uppercase tracking-widest text-blue-500 text-xs font-bold">Projects</span>
+                <h2 class="text-5xl md:text-7xl font-extrabold mt-4 text-white uppercase tracking-tight">My Website</h2>
+                <p class="text-slate-400 mt-6 max-w-2xl leading-relaxed">
                     A timeline of the development of my website as a space for my portfolio to what you're seeing right now.
                 </p>
             </div>
@@ -56,14 +56,14 @@
                         <i data-lucide="alert-circle" class="w-6 h-6 text-red-500"></i>
                     </div>
                     
-                    <div class="content-card p-10 rounded-[2.5rem]">
+                    <div class="content-card bg-[#0a0a0a] border border-white/5 p-10 rounded-[2.5rem] hover:border-blue-500/30 transition-all">
                         <div class="flex justify-between items-start mb-6">
                             <span class="tag-clean text-blue-500">IONOS Essential</span>
                             <span class="text-[10px] font-mono text-slate-600 uppercase">Jan 2026</span>
                         </div>
-                        <h3 class="text-2xl font-bold mb-4">The start.</h3>
+                        <h3 class="text-2xl font-bold mb-4 text-white">The start.</h3>
                         <p class="text-slate-400 leading-relaxed">
-                            I bought this website to create a digital portfolio on an IONOS Essential Plan which forced me to use the proprietary editor. As someone with no prior experience in website building, I initially thought this would suffice. However, as the site grew, I realized I was locked behind expensive paywalls that restricted the design freedom I needed. After months of attempting to improve the UI under these constraints, I began researching alternative hosting and deployment methods. You can view the legacy version of the site at: https://n1920791.websitebuilder.online/
+                             I had bought this website to create a digital portfolio on an IONOS Essential Plan which forced me to use the proprietary editor. To me who had no experience of website building prior to this, had thought this was enough to properly build a website. But, as the website grew, I had realised I was locked behind expensive paywalls to give me more design freedom which I desperately needed. I had continued to build upon this website for months after launching it to expand the website and making its UI better but had been met with such horrible constraints that it had caused me to search for alternate methods to design my website. You can View the old version of the website at:<a href="https://n1920791.websitebuilder.online/" class="text-blue-400 hover:underline" target="_blank">Legacy Site</a>
                         </p>
                     </div>
                 </div>
@@ -73,15 +73,14 @@
                         <i data-lucide="git-branch" class="w-6 h-6 text-blue-500"></i>
                     </div>
                     
-                    <div class="content-card p-10 rounded-[2.5rem]">
+                    <div class="content-card bg-[#0a0a0a] border border-white/5 p-10 rounded-[2.5rem] hover:border-blue-500/30 transition-all">
                         <div class="flex justify-between items-start mb-6">
                             <span class="tag-clean text-blue-500">Infrastructure</span>
                             <span class="text-[10px] font-mono text-slate-600 uppercase">April 2026</span>
                         </div>
-                        <h3 class="text-2xl font-bold mb-4">DNS Rerouting</h3>
+                        <h3 class="text-2xl font-bold mb-4 text-white">DNS Rerouting</h3>
                         <p class="text-slate-400 leading-relaxed">
-                           As project complexity increased alongside my mock exams, I transitioned to a custom infrastructure by using DNS Rerouting to host the domain on GitHub. I reconfigured the A-Records to point to GitHub's apex IP addresses and established a CNAME alias for the www subdomain. This decoupled the domain from IONOS and allowed me to use a GitHub Repository for version control and rapid deployment of custom CSS, making the UI far more integrated.
-                        </p>
+                            To rapidly develop this website to optimise my workflow, I had utilised AI as a development tool to code for me to save time and focus on the entire UI and design of the website along with all the information and focus on academics and other activities. Furthermore, to help anyone contact me, I had added a contact me section using Web3Forms to allow people to send messages via the website itself. Previously, I had tried Formspree but had switched to Web3Forms as Formspree forced users to go onto a Formspree link saying form sent which affected the UX as it did not match the scheme of my website. You can find my GitHub repository at:<a href="https://github.com/FeelingPrism/FeelingPrism.github.io" class="text-blue-400 hover:underline" target="_blank">GitHub Repository</a>
                     </div>
                 </div>
 
@@ -90,21 +89,21 @@
                         <i data-lucide="code-2" class="w-6 h-6 text-emerald-500"></i>
                     </div>
                     
-                    <div class="content-card p-10 rounded-[2.5rem]">
+                    <div class="content-card bg-[#0a0a0a] border border-white/5 p-10 rounded-[2.5rem] hover:border-blue-500/30 transition-all">
                         <div class="flex justify-between items-start mb-6">
                             <span class="tag-clean text-emerald-500">Current Website Design</span>
                             <span class="text-[10px] font-mono text-slate-600 uppercase">Present</span>
                         </div>
-                        <h3 class="text-2xl font-bold mb-4">Present.</h3>
+                        <h3 class="text-2xl font-bold mb-4 text-white">Present.</h3>
                         <p class="text-slate-400 leading-relaxed">
-                            To optimize my development workflow, I utilized AI as a technical co-pilot for rapid syntax implementation. This allowed me to focus on the high-level UI/UX design and information architecture while maintaining my academic standards. I also integrated Web3Forms for the contact section, replacing Formspree to ensure a seamless user experience that doesn't redirect away from my site's design scheme. Repository: https://github.com/FeelingPrism/FeelingPrism.github.io
+                            To optimize my development workflow, I utilized AI as a technical co-pilot for rapid syntax implementation. This allowed me to focus on the high-level UI/UX design and information architecture while maintaining my academic standards. I also integrated Web3Forms for the contact section, replacing Formspree to ensure a seamless user experience that doesn't redirect away from my site's design scheme. Repository: <a href="https://github.com/FeelingPrism/FeelingPrism.github.io" class="text-blue-400 hover:underline" target="_blank">GitHub Repo</a>
                         </p>
                     </div>
                 </div>
 
             </div>
         </section>
-    </div>
+    </main>
 
     <footer class="py-20 px-8 border-t border-white/5 bg-[#010204]">
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
