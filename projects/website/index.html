@@ -3,84 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anvit Tengse - Project Infrastructure</title>
+    <title>Anvit Tengse - Website Project</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        .tag-clean {
+            font-size: 0.65rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #94a3b8;
+            font-weight: 700;
+        }
+    </style>
 </head>
 <body class="page-fade">
 
     <nav class="fixed top-0 w-full z-[100] nav-blur">
         <div class="max-w-6xl mx-auto px-8 h-20 flex justify-between items-center">
-            <a href="/" class="flex items-center gap-3">
+            <a href="/" class="flex items-center gap-3 cursor-pointer">
                 <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center font-extrabold text-sm shadow-[0_0_15px_rgba(59,130,246,0.5)] text-white">A</div>
                 <span class="font-extrabold text-sm tracking-widest uppercase text-white">Project Log</span>
             </a>
             <div class="hidden md:flex gap-10 items-center">
-                <a href="/" class="nav-link text-xs font-bold uppercase tracking-widest text-slate-400">Home</a>
+                <a href="/" class="nav-link text-xs font-bold uppercase tracking-widest text-slate-400 hover:text-white">Home</a>
                 <a href="/projects/" class="nav-link active text-xs font-bold uppercase tracking-widest text-white">Projects</a>
-                <a href="/contact/" class="text-xs font-bold uppercase tracking-widest text-blue-500 border border-blue-500/30 px-4 py-2 rounded-full bg-blue-500/5">Contact</a>
+                <a href="/contact/" class="text-xs font-bold uppercase tracking-widest text-blue-500 border border-blue-500/30 px-4 py-2 rounded-full hover:bg-blue-500/10 transition-all">Contact Me</a>
             </div>
         </div>
     </nav>
 
-    <main class="pt-40 pb-20 px-8 max-w-4xl mx-auto">
-        <div class="mb-20">
-            <span class="stat-label">Development Sortie</span>
-            <h1 class="text-5xl md:text-6xl font-extrabold mt-4 text-gradient uppercase tracking-tight">System Evolution</h1>
+    <div class="pt-20">
+        <section class="py-20 px-8 max-w-4xl mx-auto">
+            <div class="mb-20">
+                <span class="stat-label">CASE STUDY // 001</span>
+                <h2 class="text-5xl md:text-7xl font-extrabold mt-4 text-gradient uppercase tracking-tight">Website Infrastructure</h2>
+                <p class="text-slate-400 mt-6 max-w-2xl">
+                    A technical timeline detailing the migration from proprietary hosting to a custom-coded architecture.
+                </p>
+            </div>
+
+            <div class="space-y-8 relative before:absolute before:inset-0 before:ml-7 before:-translate-x-px before:h-full before:w-0.5 before:bg-gradient-to-b before:from-blue-600/50 before:via-blue-600/10 before:to-transparent">
+                
+                <div class="relative pl-16 group">
+                    <div class="absolute left-0 top-2 w-14 h-14 bg-[#050505] border border-white/10 rounded-2xl flex items-center justify-center z-10 group-hover:border-blue-500/50 transition-colors">
+                        <i data-lucide="alert-circle" class="w-6 h-6 text-red-500"></i>
+                    </div>
+                    
+                    <div class="content-card p-10 rounded-[2.5rem]">
+                        <div class="flex justify-between items-start mb-6">
+                            <span class="tag-clean text-red-500">Phase 01: The Bottleneck</span>
+                            <span class="text-[10px] font-mono text-slate-600 uppercase">March 2026</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Proprietary Constraints</h3>
+                        <p class="text-slate-400 leading-relaxed">
+                            Initial deployment on IONOS Essential. Discovered "Walled Garden" limitations: No custom script injection or Tailwind CSS support. Proprietary editor environment was rejected to maintain engineering standards.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="relative pl-16 group">
+                    <div class="absolute left-0 top-2 w-14 h-14 bg-[#050505] border border-white/10 rounded-2xl flex items-center justify-center z-10 group-hover:border-blue-500/50 transition-colors">
+                        <i data-lucide="git-branch" class="w-6 h-6 text-blue-500"></i>
+                    </div>
+                    
+                    <div class="content-card p-10 rounded-[2.5rem]">
+                        <div class="flex justify-between items-start mb-6">
+                            <span class="tag-clean text-blue-500">Phase 02: Infrastructure Pivot</span>
+                            <span class="text-[10px] font-mono text-slate-600 uppercase">April 2026</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">DNS Rerouting</h3>
+                        <p class="text-slate-400 leading-relaxed">
+                            Decoupled domain from IONOS hosting. Reconfigured <strong>A-Records</strong> and <strong>CNAME</strong> pointers to GitHub Pages. Established Git-based version control for a continuous deployment (CI/CD) workflow.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="relative pl-16 group">
+                    <div class="absolute left-0 top-2 w-14 h-14 bg-[#050505] border border-white/10 rounded-2xl flex items-center justify-center z-10 group-hover:border-blue-500/50 transition-colors">
+                        <i data-lucide="code-2" class="w-6 h-6 text-emerald-500"></i>
+                    </div>
+                    
+                    <div class="content-card p-10 rounded-[2.5rem]">
+                        <div class="flex justify-between items-start mb-6">
+                            <span class="tag-clean text-emerald-500">Phase 03: System Integration</span>
+                            <span class="text-[10px] font-mono text-slate-600 uppercase">Present</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">AJAX & Frontend Engineering</h3>
+                        <p class="text-slate-400 leading-relaxed">
+                            Implemented custom Tailwind utility classes. Engineered an asynchronous <strong>Fetch API</strong> pipeline for Web3Forms, enabling zero-refresh contact submissions and optimized asset delivery.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </div>
+
+    <footer class="py-20 px-8 border-t border-white/5 bg-[#010204]">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex items-center gap-3">
+                <div class="w-6 h-6 bg-blue-600/20 rounded flex items-center justify-center font-bold text-[10px] text-blue-500">A</div>
+                <span class="text-[10px] font-bold tracking-[0.3em] uppercase text-slate-500">Anvit Tengse // Documentation</span>
+            </div>
+            <div class="flex gap-10">
+                <i data-lucide="github" class="w-5 h-5 text-slate-600 hover:text-white cursor-pointer transition-colors"></i>
+                <i data-lucide="code" class="w-5 h-5 text-slate-600 hover:text-white cursor-pointer transition-colors"></i>
+            </div>
         </div>
+    </footer>
 
-        <div class="space-y-12 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-white/10 before:to-transparent">
-            
-            <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
-                <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white/10 bg-[#020408] shadow-xl z-10 shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
-                    <div class="w-2 h-2 bg-red-500 rounded-full shadow-[0_0_10px_rgba(239,68,68,0.8)]"></div>
-                </div>
-                <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] content-card p-6 rounded-3xl">
-                    <div class="flex items-center justify-between mb-2">
-                        <time class="stat-label text-red-500">Phase 01</time>
-                    </div>
-                    <div class="text-white font-bold uppercase text-sm mb-2">IONOS CMS Deployment</div>
-                    <p class="text-slate-400 text-xs leading-relaxed">
-                        Initial build using proprietary builder. Identified critical software locks preventing custom script injection and Tailwind integration.
-                    </p>
-                </div>
-            </div>
-
-            <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
-                <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white/10 bg-[#020408] shadow-xl z-10 shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
-                    <div class="w-2 h-2 bg-blue-500 rounded-full shadow-[0_0_10px_rgba(59,130,246,0.8)]"></div>
-                </div>
-                <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] content-card p-6 rounded-3xl">
-                    <div class="flex items-center justify-between mb-2">
-                        <time class="stat-label text-blue-500">Phase 02</time>
-                    </div>
-                    <div class="text-white font-bold uppercase text-sm mb-2">DNS Migration</div>
-                    <p class="text-slate-400 text-xs leading-relaxed">
-                        Decoupled domain from IONOS Essential. Pointed A-Records to GitHub Pages infrastructure to enable full-stack autonomy.
-                    </p>
-                </div>
-            </div>
-
-            <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group">
-                <div class="flex items-center justify-center w-10 h-10 rounded-full border border-white/10 bg-[#020408] shadow-xl z-10 shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2">
-                    <div class="w-2 h-2 bg-emerald-500 rounded-full shadow-[0_0_10px_rgba(16,185,129,0.8)]"></div>
-                </div>
-                <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] content-card p-6 rounded-3xl">
-                    <div class="flex items-center justify-between mb-2">
-                        <time class="stat-label text-emerald-500">Phase 03</time>
-                    </div>
-                    <div class="text-white font-bold uppercase text-sm mb-2">Custom Integration</div>
-                    <p class="text-slate-400 text-xs leading-relaxed">
-                        Implemented Tailwind CSS framework and engineered AJAX-based contact pipelines via Web3Forms for zero-refresh UX.
-                    </p>
-                </div>
-            </div>
-
-        </div>
-    </main>
-
-    <script>lucide.createIcons();</script>
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 </html>
