@@ -21,7 +21,219 @@
             <div class="hidden md:flex gap-10 items-center">
                 <a href="/" class="nav-link text-xs font-bold uppercase tracking-widest text-slate-400 hover:text-white">Home</a>
                 <a href="/interests/" class="nav-link text-xs font-bold uppercase tracking-widest text-slate-400 hover:text-white">Interests</a>
+                <a href="/projects/" class="nav-link text-xs font-bold uppercase tracking-widest t<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anvit Tengse - Photography</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;700;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+    <nav class="fixed top-0 w-full z-[100] nav-blur">
+        <div class="max-w-6xl mx-auto px-8 h-20 flex justify-between items-center">
+            <a href="/" class="flex items-center gap-3 cursor-pointer">
+                <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center font-extrabold text-sm shadow-[0_0_15px_rgba(59,130,246,0.5)]">A</div>
+                <span class="font-extrabold text-sm tracking-widest uppercase text-white">Anvit Tengse</span>
+            </a>
+            <div class="hidden md:flex gap-10 items-center">
+                <a href="/" class="nav-link text-xs font-bold uppercase tracking-widest text-slate-400 hover:text-white">Home</a>
+                <a href="/interests/" class="nav-link text-xs font-bold uppercase tracking-widest text-slate-400 hover:text-white">Interests</a>
                 <a href="/projects/" class="nav-link text-xs font-bold uppercase tracking-widest text-slate-400 hover:text-white">Projects</a>
+                <a href="/photography/" class="nav-link active text-xs font-bold uppercase tracking-widest text-white">Photography</a>
+                <a href="/contact/" class="text-xs font-bold uppercase tracking-widest text-blue-500 border border-blue-500/30 px-4 py-2 rounded-full hover:bg-blue-500/10 transition-all">Contact Me</a>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="fixed bottom-6 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-md z-[999] bg-[#09090b]/80 backdrop-blur-lg border border-white/10 rounded-2xl md:hidden shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+        <div class="flex justify-around items-center h-16 px-2">
+            <a href="/" class="flex flex-col items-center gap-1 text-slate-400 hover:text-white transition-colors">
+                <i data-lucide="home" class="w-5 h-5"></i>
+                <span class="text-[9px] font-bold uppercase tracking-wider">Home</span>
+            </a>
+            <a href="/interests/" class="flex flex-col items-center gap-1 text-slate-400 hover:text-white transition-colors">
+                <i data-lucide="compass" class="w-5 h-5"></i>
+                <span class="text-[9px] font-bold uppercase tracking-wider">Interests</span>
+            </a>
+            <a href="/projects/" class="flex flex-col items-center gap-1 text-slate-400 hover:text-white transition-colors">
+                <i data-lucide="folder-git-2" class="w-5 h-5"></i>
+                <span class="text-[9px] font-bold uppercase tracking-wider">Projects</span>
+            </a>
+            <a href="/photography/" class="flex flex-col items-center gap-1 text-blue-500">
+                <i data-lucide="camera" class="w-5 h-5"></i>
+                <span class="text-[9px] font-bold uppercase tracking-wider">Photos</span>
+            </a>
+            <a href="/contact/" class="flex flex-col items-center gap-1 text-slate-400 hover:text-white transition-colors">
+                <i data-lucide="mail" class="w-5 h-5"></i>
+                <span class="text-[9px] font-bold uppercase tracking-wider">Contact</span>
+            </a>
+        </div>
+    </nav>
+
+    <div class="pt-20">
+        <section class="page-fade py-20 px-8 max-w-6xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-end gap-8 mb-20">
+                <div class="max-w-2xl">
+                    <span class="stat-label">PHOTOGRAPHY</span>
+                    <h2 class="text-5xl md:text-7xl font-extrabold mt-4 text-gradient uppercase tracking-tight">Gallery</h2>
+                    <p class="text-slate-400 mt-6 leading-relaxed">Capturing the intersection of engineering and environment. My photography focuses on technical details, industrial design, and structural brutalism.</p>
+                </div>
+                <div class="flex gap-4 mb-2">
+                    <div class="px-6 py-3 rounded-full bg-blue-600/10 border border-blue-500/20 text-blue-400 text-[10px] font-bold uppercase tracking-widest">3rd Place Winner - 2024 Competition</div>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="photo-grid-item group">
+                    <div class="photo-overlay">
+                        <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest mb-1">AUTOMOTIVE</span>
+                        <h4 class="text-lg font-bold text-white mb-2">F-Pace Headlights</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">Close up shot of the J blade headlights at night.</p>
+                    </div>
+                    <img src="/images/shot1.jpg" alt="F-Pace Headlights">
+                </div>
+
+                <div class="photo-grid-item group">
+                    <div class="photo-overlay">
+                        <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest mb-1">AUTOMOTIVE</span>
+                        <h4 class="text-lg font-bold text-white mb-2">F-Pace Tailights</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">Zoom shot of the LED Tailights at night.</p>
+                    </div>
+                    <img src="/images/shot2.jpg" alt="F-Pace Tailights">
+                </div>
+
+                <div class="photo-grid-item group">
+                    <div class="photo-overlay">
+                        <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest mb-1">AUTOMOTIVE</span>
+                        <h4 class="text-lg font-bold text-white mb-2">Jaguar Logo</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">Macro shot of the Jaguar Logo at wet conditions.</p>
+                    </div>
+                    <img src="/images/shot3.jpg" alt="Jaguar Logo">
+                </div>
+
+                <div class="photo-grid-item group md:col-span-2 aspect-[16/9]">
+                    <div class="photo-overlay">
+                        <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest mb-1">AVIATION</span>
+                        <h4 class="text-lg font-bold text-white mb-2">Dubai International Airport</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">An evening shot of DXB Terminal 1 showing aircraft at the gates.</p>
+                    </div>
+                    <img src="/images/shot4.jpg" alt="Dubai Airport">
+                </div>
+
+                <div class="photo-grid-item group">
+                    <div class="photo-overlay">
+                        <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest mb-1">ARCHITECTURE</span>
+                        <h4 class="text-lg font-bold text-white mb-2">Burj Khalifa</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">An evening capture of the tallest building on the perspective of the ground.</p>
+                    </div>
+                    <img src="/images/shot5.jpg" alt="Burj Khalifa">
+                </div>
+
+                <div class="photo-grid-item group">
+                    <div class="photo-overlay">
+                        <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest mb-1">LANDSCAPE</span>
+                        <h4 class="text-lg font-bold text-white mb-2">Dubai Desert</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">Wide angle shot of the vast expanse of UAE desert dunes.</p>
+                    </div>
+                    <img src="/images/shot6.jpg" alt="UAE Deserts">
+                </div>
+
+                <div class="photo-grid-item group">
+                    <div class="photo-overlay">
+                        <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest mb-1">INFRASTRUCTURE</span>
+                        <h4 class="text-lg font-bold text-white mb-2">Dartford Train Station</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">Portrait orientation shot of Dartford station at night.</p>
+                    </div>
+                    <img src="/images/shot7.jpg" alt="Dartford Station">
+                </div>
+
+                <div class="photo-grid-item group">
+                    <div class="photo-overlay">
+                        <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest mb-1">ARCHITECTURE</span>
+                        <h4 class="text-lg font-bold text-white mb-2">Flåm, Norway</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">Capture of the diverse landscape and architecture in rural parts of Norway.</p>
+                    </div>
+                    <img src="/images/shot8.jpg" alt="Flåm, Norway">
+                </div>
+
+                <div class="photo-grid-item group">
+                    <div class="photo-overlay">
+                        <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest mb-1">ARCHITECTURE</span>
+                        <h4 class="text-lg font-bold text-white mb-2">Big Ben</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">Zoom shot of the Big Ben from a distance.</p>
+                    </div>
+                    <img src="/images/shot10.jpg" alt="Big Ben">
+                </div>
+
+                <div class="photo-grid-item group">
+                    <div class="photo-overlay">
+                        <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest mb-1">ARCHITECTURE</span>
+                        <h4 class="text-lg font-bold text-white mb-2">Buildings</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">Taken whilst in a moving car and edited to show a cascading effect of the builidngs.</p>
+                    </div>
+                    <img src="/images/shot11.jpg" alt="Buildings">
+                </div>
+
+                <div class="photo-grid-item group">
+                    <div class="photo-overlay">
+                        <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest mb-1">ATMOSPHERE</span>
+                        <h4 class="text-lg font-bold text-white mb-2">Suburban Rainfall</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">A photo of the water reflection in my garden reflecting its surroundings.</p>
+                    </div>
+                    <img src="/images/shot12.jpg" alt="Suburban Rain">
+                </div>
+
+                <div class="photo-grid-item group md:col-span-3 aspect-[21/9]">
+                    <div class="photo-overlay">
+                        <span class="text-[10px] font-bold text-blue-400 uppercase tracking-widest mb-1">LANDSCAPE</span>
+                        <h4 class="text-lg font-bold text-white mb-2">Flåm, Norway</h4>
+                        <p class="text-xs text-slate-300 leading-relaxed">A zoom shot of Norway's fjords at Stegastein Lookout.</p>
+                    </div>
+                    <img src="/images/shot9.jpg" alt="Norway's Fjords">
+                </div>
+            </div>
+
+            <div class="mt-12 p-8 border border-white/5 bg-white/[0.02] rounded-[2rem] flex flex-wrap gap-12 justify-center">
+                <div class="text-center">
+                    <span class="stat-label block mb-2">Primary Lens</span>
+                    <span class="text-sm font-bold text-slate-300">f/1.6 Wide-Angle Optics</span>
+                </div>
+                <div class="text-center">
+                    <span class="stat-label block mb-2">Capture Mode</span>
+                    <span class="text-sm font-bold text-slate-300">RAW / 10-bit HDR</span>
+                </div>
+                <div class="text-center">
+                    <span class="stat-label block mb-2">Workflow</span>
+                    <span class="text-sm font-bold text-slate-300">Technical Post-Processing</span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer class="py-20 px-8 border-t border-white/5 bg-[#010204]">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex items-center gap-3">
+                <div class="w-6 h-6 bg-blue-600/20 rounded flex items-center justify-center font-bold text-[10px] text-blue-500">A</div>
+                <span class="text-[10px] font-bold tracking-[0.3em] uppercase text-slate-500">Anvit Tengse // Photography</span>
+            </div>
+            <div class="flex gap-10">
+                <i data-lucide="github" class="w-5 h-5 text-slate-600 hover:text-white cursor-pointer transition-colors"></i>
+                <i data-lucide="instagram" class="w-5 h-5 text-slate-600 hover:text-white cursor-pointer transition-colors"></i>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+</html>ext-slate-400 hover:text-white">Projects</a>
                 <a href="/photography/" class="nav-link active text-xs font-bold uppercase tracking-widest text-white">Photography</a>
                 <a href="/contact/" class="text-xs font-bold uppercase tracking-widest text-blue-500 border border-blue-500/30 px-4 py-2 rounded-full hover:bg-blue-500/10 transition-all">Contact Me</a>
             </div>
