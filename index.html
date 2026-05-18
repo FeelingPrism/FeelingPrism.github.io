@@ -9,16 +9,15 @@
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
-<body>
+<body class="bg-[#050505] text-white antialiased">
 
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-[100] nav-blur">
+    <nav class="fixed top-0 left-0 w-full z-[999] bg-[#050505]/80 backdrop-blur-md border-b border-white/5 hidden md:block">
         <div class="max-w-6xl mx-auto px-8 h-20 flex justify-between items-center">
             <a href="/" class="flex items-center gap-3 cursor-pointer">
-                <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center font-extrabold text-sm shadow-[0_0_15px_rgba(59,130,246,0.5)]">A</div>
+                <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center font-extrabold text-sm shadow-[0_0_15px_rgba(59,130,246,0.5)] text-white">A</div>
                 <span class="font-extrabold text-sm tracking-widest uppercase text-white">Anvit Tengse</span>
             </a>
-            <div class="hidden md:flex gap-10 items-center">
+            <div class="flex gap-10 items-center">
                 <a href="/" class="nav-link active text-xs font-bold uppercase tracking-widest text-white">Home</a>
                 <a href="/interests/" class="nav-link text-xs font-bold uppercase tracking-widest text-slate-400 hover:text-white">Interests</a>
                 <a href="/projects/" class="nav-link text-xs font-bold uppercase tracking-widest text-slate-400 hover:text-white">Projects</a>
@@ -28,52 +27,78 @@
         </div>
     </nav>
 
-    <div class="pt-20">
-        <!-- Main Content -->
-        <section class="page-fade">
+    <nav class="fixed bottom-6 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-md z-[999] bg-[#09090b]/80 backdrop-blur-lg border border-white/10 rounded-2xl md:hidden shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+        <div class="flex justify-around items-center h-16 px-2">
+            <a href="/" class="flex flex-col items-center gap-1 text-blue-500">
+                <i data-lucide="home" class="w-5 h-5"></i>
+                <span class="text-[9px] font-bold uppercase tracking-wider">Home</span>
+            </a>
+            <a href="/interests/" class="flex flex-col items-center gap-1 text-slate-400 hover:text-white transition-colors">
+                <i data-lucide="compass" class="w-5 h-5"></i>
+                <span class="text-[9px] font-bold uppercase tracking-wider">Interests</span>
+            </a>
+            <a href="/projects/" class="flex flex-col items-center gap-1 text-slate-400 hover:text-white transition-colors">
+                <i data-lucide="folder-git-2" class="w-5 h-5"></i>
+                <span class="text-[9px] font-bold uppercase tracking-wider">Projects</span>
+            </a>
+            <a href="/photography/" class="flex flex-col items-center gap-1 text-slate-400 hover:text-white transition-colors">
+                <i data-lucide="camera" class="w-5 h-5"></i>
+                <span class="text-[9px] font-bold uppercase tracking-wider">Photos</span>
+            </a>
+            <a href="/contact/" class="flex flex-col items-center gap-1 text-slate-400 hover:text-white transition-colors">
+                <i data-lucide="mail" class="w-5 h-5"></i>
+                <span class="text-[9px] font-bold uppercase tracking-wider">Contact</span>
+            </a>
+            
+        </div>
+    </nav>
+
+    <div class="pt-12 md:pt-20 pb-24 md:pb-0">
+        <main class="page-fade">
+            
             <div class="min-h-[85vh] flex flex-col justify-center items-center px-6 text-center">
-                <h1 class="text-7xl md:text-[10rem] font-extrabold mb-8 text-gradient uppercase tracking-tighter leading-[0.85] drop-shadow-2xl">
-                    Anvit <br> Tengse
+                <h1 class="text-6xl md:text-[10rem] font-extrabold mb-8 text-gradient uppercase tracking-tighter leading-[0.85] drop-shadow-2xl">
+                    Anvit <br class="hidden md:block"> Tengse
                 </h1>
-                <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed mb-12 font-medium">
-                    Year 10 Wilmington Grammar student. Aspiring Aeronautical Engineer who is passionate about the aviation, automotive and defence industry.
+                <p class="text-base md:text-xl text-slate-400 max-w-2xl mx-auto leading-relaxed mb-12 font-medium">
+                    Year 10 Wilmington Grammar student. Aspiring Aeronautical Engineer who is passionate about the aviation, automotive, and defence industries.
                 </p>
-                <div class="flex flex-col md:flex-row gap-4">
-                    <a href="/interests" class="px-12 py-5 rounded-full border border-white/10 font-bold text-xs uppercase tracking-[0.2em] hover:bg-white/5 transition-all flex items-center gap-2 justify-center">View My Interests</a>
+                <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto px-4 sm:px-0">
+                    <a href="/interests" class="px-12 py-5 rounded-full border border-white/10 bg-white/5 font-bold text-xs uppercase tracking-[0.2em] hover:bg-white/10 transition-all flex items-center gap-2 justify-center">View My Interests</a>
                     <a href="/projects" class="px-12 py-5 rounded-full border border-white/10 font-bold text-xs uppercase tracking-[0.2em] hover:bg-white/5 transition-all flex items-center gap-2 justify-center">View My Projects</a>
                 </div>
             </div>
 
-            <div id="about" class="py-32 px-8 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="content-card p-10 rounded-[2rem]">
+            <div id="about" class="py-20 md:py-32 px-6 max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="content-card bg-[#0a0a0a] border border-white/5 p-10 rounded-[2rem] hover:border-blue-500/20 transition-all">
                     <div class="w-12 h-12 bg-blue-500/10 rounded-2xl flex items-center justify-center text-blue-500 mb-8"><i data-lucide="layers"></i></div>
                     <h3 class="text-xl font-bold mb-4">CAD Software</h3>
                     <p class="text-slate-400 text-sm leading-relaxed">Experienced in CAD Software such as Fusion 360. Frequently use it to design vehicles like cars and tanks and solving problems with CAD.</p>
                 </div>
-                <div class="content-card p-10 rounded-[2rem]">
+                <div class="content-card bg-[#0a0a0a] border border-white/5 p-10 rounded-[2rem] hover:border-blue-500/20 transition-all">
                     <div class="w-12 h-12 bg-blue-500/10 rounded-2xl flex items-center justify-center text-blue-500 mb-8"><i data-lucide="cpu"></i></div>
                     <h3 class="text-xl font-bold mb-4">Tech Enthusiast</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Contain a passion to modify and iterate upon existing tech and software like flashing custom ROM's and rooting devices such as my phones or installing mods onto games such as CP2077 or Minecraft</p>
+                    <p class="text-slate-400 text-sm leading-relaxed">Contain a passion to modify and iterate upon existing tech and software like flashing custom ROM's and rooting devices such as my phones or installing mods onto games such as CP2077 or Minecraft.</p>
                 </div>
-                <div class="content-card p-10 rounded-[2rem]">
+                <div class="content-card bg-[#0a0a0a] border border-white/5 p-10 rounded-[2rem] hover:border-blue-500/20 transition-all">
                     <div class="w-12 h-12 bg-blue-500/10 rounded-2xl flex items-center justify-center text-blue-500 mb-8"><i data-lucide="plane"></i></div>
                     <h3 class="text-xl font-bold mb-4">Aviation</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Deep interest in aviation in both the civil and defense sectors. Joined RAFAC and went to RIAT 2025 to further pursue my interest in Aviation</p>
+                    <p class="text-slate-400 text-sm leading-relaxed">Deep interest in aviation in both the civil and defense sectors. Joined RAFAC and went to RIAT 2025 to further pursue my interest in Aviation.</p>
                 </div>
             </div>
 
-            <div class="py-24 border-y border-white/5 bg-white/[0.01]">
+            <div class="py-16 md:py-24 border-y border-white/5 bg-white/[0.01]">
                 <div class="max-w-6xl mx-auto px-8 grid grid-cols-2 md:grid-cols-4 gap-12 text-center md:text-left">
-                    <div><div class="stat-label mb-4">School</div><div class="text-2xl font-extrabold tracking-tight">Wilmington <br> Grammar</div></div>
-                    <div><div class="stat-label mb-4">Grades</div><div class="text-2xl font-extrabold tracking-tight text-gradient">Grade 7/8/9s</div></div>
-                    <div><div class="stat-label mb-4">Age</div><div class="text-2xl font-extrabold tracking-tight">15 Years Old</div></div>
-                    <div><div class="stat-label mb-4">Ambition</div><div class="text-2xl font-extrabold tracking-tight">Aero Eng</div></div>
+                    <div><div class="stat-label text-slate-500 text-[10px] font-bold tracking-widest uppercase mb-4">School</div><div class="text-xl md:text-2xl font-extrabold tracking-tight">Wilmington <br class="hidden md:block"> Grammar</div></div>
+                    <div><div class="stat-label text-slate-500 text-[10px] font-bold tracking-widest uppercase mb-4">Grades</div><div class="text-xl md:text-2xl font-extrabold tracking-tight text-gradient">Grade 7/8/9s</div></div>
+                    <div><div class="stat-label text-slate-500 text-[10px] font-bold tracking-widest uppercase mb-4">Age</div><div class="text-xl md:text-2xl font-extrabold tracking-tight">15 Years Old</div></div>
+                    <div><div class="stat-label text-slate-500 text-[10px] font-bold tracking-widest uppercase mb-4">Ambition</div><div class="text-xl md:text-2xl font-extrabold tracking-tight">Aero Eng</div></div>
                 </div>
             </div>
-        </section>
+            
+        </main>
     </div>
 
-    <!-- Footer -->
     <footer class="py-20 px-8 border-t border-white/5 bg-[#010204]">
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
             <div class="flex items-center gap-3">
@@ -88,7 +113,6 @@
     </footer>
 
     <script>
-        // Initialize Lucide icons
         lucide.createIcons();
     </script>
 </body>
