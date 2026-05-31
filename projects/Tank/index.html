@@ -3,27 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anvit Tengse - MBT 1</title>
+    <title>Anvit Tengse - MBT </title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../../css/style.css">
 </head>
-<body>
-
-    <nav class="fixed top-0 w-full z-[100] nav-blur">
+<body class="bg-[#050505] text-white antialiased">
+    
+    <nav class="fixed top-0 left-0 w-full z-[999] bg-[#050505]/80 backdrop-blur-md border-b border-white/5 hidden md:block">
         <div class="max-w-6xl mx-auto px-8 h-20 flex justify-between items-center">
-            <a href="/" class="flex items-center gap-3">
-                <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center font-extrabold text-sm shadow-[0_0_15px_rgba(59,130,246,0.5)]">A</div>
+            <a href="/" class="flex items-center gap-3 cursor-pointer">
+                <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center font-extrabold text-sm shadow-[0_0_15px_rgba(59,130,246,0.5)] text-white">A</div>
                 <span class="font-extrabold text-sm tracking-widest uppercase text-white">Anvit Tengse</span>
             </a>
-            <div class="hidden md:flex gap-10 items-center">
+            <div class="flex gap-10 items-center">
                 <a href="/" class="nav-link text-xs font-bold uppercase tracking-widest text-slate-400 hover:text-white">Home</a>
                 <a href="/interests/" class="nav-link text-xs font-bold uppercase tracking-widest text-slate-400 hover:text-white">Interests</a>
                 <a href="/projects/" class="nav-link active text-xs font-bold uppercase tracking-widest text-white">Projects</a>
                 <a href="/photography/" class="nav-link text-xs font-bold uppercase tracking-widest text-slate-400 hover:text-white">Photography</a>
-                <a href="/contact/" class="text-xs font-bold uppercase tracking-widest text-blue-500 border border-blue-500/30 px-4 py-2 rounded-full bg-blue-500/5 transition-all">Contact Me</a>
+                <a href="/contact/" class="text-xs font-bold uppercase tracking-widest text-blue-500 border border-blue-500/30 px-4 py-2 rounded-full hover:bg-blue-500/10 transition-all">Contact Me</a>
             </div>
         </div>
     </nav>
@@ -53,8 +53,8 @@
         </div>
     </nav>
 
-    <div class="pt-20">
-        <main class="page-fade py-20 px-8 max-w-6xl mx-auto">
+    <div class="pt-12 md:pt-20 pb-24 md:pb-0">
+        <section class="page-fade py-20 px-6 max-w-6xl mx-auto">
             
             <div class="mb-8">
                 <a href="/projects/" class="text-xs font-bold uppercase tracking-widest text-blue-400 hover:text-blue-300 flex items-center gap-2 transition-colors">
@@ -64,32 +64,36 @@
 
             <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 mb-16">
                 <div class="max-w-2xl">
-                    <span class="stat-label">DEFENSE ENGINEERING // CAD ASSEMBLY</span>
-                    <h2 class="text-4xl md:text-6xl font-extrabold mt-4 text-gradient uppercase tracking-tight">Main Battle Tank</h2>
-                    <p class="text-slate-400 mt-6 leading-relaxed">Parametric solid model configuration analyzing ballistic protection profiles, unmanned turret clearance geometry, and platform layouts.</p>
+                    <span class="text-xs font-bold tracking-[0.2em] text-slate-500 uppercase">DEFENSE ENGINEERING // CAD ASSEMBLY</span>
+                    <h2 class="text-4xl md:text-6xl font-extrabold mt-4 text-white uppercase tracking-tight">Main Battle Tank</h2>
+                    <p class="text-slate-400 mt-6 leading-relaxed">
+                        Parametric solid modeling assembly focused on ballistic protection geometries, unmanned turret clearance vectors, and hull layout parameters.
+                    </p>
                 </div>
                 <div>
-                    <div class="px-6 py-3 rounded-full bg-blue-600/10 border border-blue-500/20 text-blue-400 text-[10px] font-bold uppercase tracking-widest">Fusion 360 Production File</div>
+                    <div class="px-6 py-3 rounded-full bg-blue-600/10 border border-blue-500/20 text-blue-400 text-[10px] font-bold uppercase tracking-widest">
+                        Fusion 360 Production File
+                    </div>
                 </div>
             </div>
 
-            <div class="content-card overflow-hidden rounded-[2.5rem] mb-16 aspect-[16/9] relative w-full bg-[#050507]">
+            <div class="overflow-hidden rounded-[2.5rem] mb-16 aspect-[16/9] relative w-full bg-[#0a0a0a] border border-white/5 shadow-2xl">
                 
                 <model-viewer 
-                    src="../models/tank.glb" 
+                    src="../../models/tank.glb" 
                     alt="Anvit Tengse - MBT 3D Production Geometry Assembly"
                     camera-controls 
                     auto-rotate 
-                    rotation-per-second="25deg"
+                    rotation-per-second="20deg"
                     interaction-prompt="auto"
-                    shadow-intensity="1.8" 
+                    shadow-intensity="2" 
                     exposure="0.95"
                     environment-image="neutral"
                     loading="eager"
                     style="width: 100%; height: 100%;"
                     class="cursor-grab active:cursor-grabbing">
                     
-                    <div slot="poster" class="absolute inset-0 flex flex-col items-center justify-center bg-[#050507] gap-4">
+                    <div slot="poster" class="absolute inset-0 flex flex-col items-center justify-center bg-[#0a0a0a] gap-4">
                         <div class="w-6 h-6 border-2 border-blue-500 border-t-transparent rounded-full animate-spin"></div>
                         <span class="text-[10px] font-mono tracking-[0.3em] text-slate-500 uppercase">PARSING CAD LAYER OBJECT DATA...</span>
                     </div>
@@ -97,7 +101,7 @@
                 
                 <div class="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.01)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.01)_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none"></div>
                 
-                <div class="absolute bottom-6 left-6 bg-[#09090b]/95 backdrop-blur-md border border-white/10 px-4 py-2 rounded-xl pointer-events-none">
+                <div class="absolute bottom-6 left-6 bg-[#050505]/90 backdrop-blur-md border border-white/10 px-4 py-2 rounded-xl pointer-events-none">
                     <p class="text-[10px] font-mono tracking-wider text-blue-500 flex items-center gap-2">
                         <span class="w-1.5 h-1.5 bg-blue-500 rounded-full animate-pulse"></span>
                         WATERMARK LAYER ACTIVE // ANVIT TENGSE INTELLECTUAL PROPERTY
@@ -107,55 +111,61 @@
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
                 
-                <div class="content-card p-8 rounded-[2rem]">
-                    <div class="w-10 h-10 bg-blue-600/10 border border-blue-500/20 rounded-xl flex items-center justify-center text-blue-500 mb-6">
-                        <i data-lucide="shield" class="w-5 h-5"></i>
+                <div class="p-10 md:p-12 rounded-[2.5rem] bg-[#0a0a0a] border border-white/5 transition-all hover:border-blue-500/20">
+                    <div class="w-12 h-12 bg-blue-500/10 rounded-2xl flex items-center justify-center text-blue-500 mb-8">
+                        <i data-lucide="shield" class="w-6 h-6"></i>
                     </div>
-                    <h3 class="text-lg font-bold text-white uppercase tracking-wider mb-3">Sloped Glacis</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Line-of-Sight thickness validation across primary forward glacis sectors to maximize geometric deflection profiles.</p>
+                    <h3 class="text-xl font-bold mb-4 uppercase tracking-wider text-white">Sloped Glacis</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Line-of-Sight thickness validation across primary forward glacis sectors to maximize geometric deflection profiles against incoming ballistics.
+                    </p>
                 </div>
 
-                <div class="content-card p-8 rounded-[2rem]">
-                    <div class="w-10 h-10 bg-blue-600/10 border border-blue-500/20 rounded-xl flex items-center justify-center text-blue-500 mb-6">
-                        <i data-lucide="crosshair" class="w-5 h-5"></i>
+                <div class="p-10 md:p-12 rounded-[2.5rem] bg-[#0a0a0a] border border-white/5 transition-all hover:border-blue-500/20">
+                    <div class="w-12 h-12 bg-blue-500/10 rounded-2xl flex items-center justify-center text-blue-500 mb-8">
+                        <i data-lucide="crosshair" class="w-6 h-6"></i>
                     </div>
-                    <h3 class="text-lg font-bold text-white uppercase tracking-wider mb-3">Unmanned Turret</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Reduced vertical cross-section configuration with external optical housing integration and localized mechanical gear sweeps.</p>
+                    <h3 class="text-xl font-bold mb-4 uppercase tracking-wider text-white">Unmanned Turret</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Reduced vertical cross-section configuration with isolated weapon mechanical sweeps and external integrated sensor module pods.
+                    </p>
                 </div>
 
-                <div class="content-card p-8 rounded-[2rem]">
-                    <div class="w-10 h-10 bg-blue-600/10 border border-blue-500/20 rounded-xl flex items-center justify-center text-blue-500 mb-6">
-                        <i data-lucide="zap" class="w-5 h-5"></i>
+                <div class="p-10 md:p-12 rounded-[2.5rem] bg-[#0a0a0a] border border-white/5 transition-all hover:border-blue-500/20">
+                    <div class="w-12 h-12 bg-blue-500/10 rounded-2xl flex items-center justify-center text-blue-500 mb-8">
+                        <i data-lucide="zap" class="w-6 h-6"></i>
                     </div>
-                    <h3 class="text-lg font-bold text-white uppercase tracking-wider mb-3">Platform Systems</h3>
-                    <p class="text-slate-400 text-sm leading-relaxed">Chassis tracking arrays, roof-mounted Remote Weapon Station (RWS) pivot layouts, and protective skirt profiles.</p>
+                    <h3 class="text-xl font-bold mb-4 uppercase tracking-wider text-white">Chassis Integration</h3>
+                    <p class="text-slate-400 text-sm leading-relaxed">
+                        Track protection configuration tracking lines paired with an independent roof platform station and utility defensive mortar layout placements.
+                    </p>
                 </div>
 
             </div>
 
-            <div class="p-8 border border-white/5 bg-white/[0.01] rounded-[2rem] flex flex-wrap gap-12 justify-center">
+            <div class="p-8 border border-white/5 bg-[#0a0a0a] rounded-[2.5rem] flex flex-wrap gap-12 justify-center">
                 <div class="text-center">
-                    <span class="stat-label block mb-2">Primary Configuration</span>
+                    <span class="text-[10px] font-bold tracking-[0.2em] text-slate-500 block mb-2 uppercase">Primary Layout</span>
                     <span class="text-sm font-bold text-slate-300">Smoothbore Stabilized Armament Array</span>
                 </div>
                 <div class="text-center">
-                    <span class="stat-label block mb-2">Modeling Architecture</span>
-                    <span class="text-sm font-bold text-slate-300">Parametric Surface & Solid Assembly</span>
+                    <span class="text-[10px] font-bold tracking-[0.2em] text-slate-500 block mb-2 uppercase">Modeling Mode</span>
+                    <span class="text-sm font-bold text-slate-300">Parametric Surface & Solid Modeling</span>
                 </div>
                 <div class="text-center">
-                    <span class="stat-label block mb-2">Chassis Baseline</span>
-                    <span class="text-sm font-bold text-slate-300">Heavy Tracked System Layout</span>
+                    <span class="text-[10px] font-bold tracking-[0.2em] text-slate-500 block mb-2 uppercase">Chassis Profile</span>
+                    <span class="text-sm font-bold text-slate-300">Heavy Tracked Platform Layout</span>
                 </div>
             </div>
 
-        </main>
+        </section>
     </div>
 
     <footer class="py-20 px-8 border-t border-white/5 bg-[#010204]">
         <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
             <div class="flex items-center gap-3">
                 <div class="w-6 h-6 bg-blue-600/20 rounded flex items-center justify-center font-bold text-[10px] text-blue-500">A</div>
-                <span class="text-[10px] font-bold tracking-[0.3em] uppercase text-slate-500">Anvit Tengse // Project Hub</span>
+                <span class="text-[10px] font-bold tracking-[0.3em] uppercase text-slate-500">Anvit Tengse // Projects</span>
             </div>
             <div class="flex gap-10">
                 <i data-lucide="github" class="w-5 h-5 text-slate-600 hover:text-white cursor-pointer transition-colors"></i>
@@ -165,6 +175,7 @@
     </footer>
 
     <script>
+        // Mount vector engine assets
         lucide.createIcons();
     </script>
 </body>
