@@ -3,70 +3,181 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anvit Tengse - MBT</title>
+    <title>Anvit Tengse - Main Battle Tank Project</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.4.0/model-viewer.min.js"></script>
     <link rel="stylesheet" href="../../css/style.css">
+    <style>
+        .tag-clean {
+            font-size: 0.65rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: #94a3b8;
+            font-weight: 700;
+        }
+    </style>
 </head>
 <body class="bg-[#050505] text-white antialiased">
-    
-    <div class="pt-12 md:pt-20 pb-24 md:pb-0">
-        <section class="page-fade py-20 px-6 max-w-6xl mx-auto">
-            <div class="mb-8">
-                <a href="/projects/" class="text-xs font-bold uppercase tracking-widest text-blue-400 hover:text-blue-300 flex items-center gap-2 transition-colors">
-                    <i data-lucide="arrow-left" class="w-4 h-4"></i> Back to Projects
-                </a>
-            </div>
 
-            <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 mb-16">
-                <div class="max-w-2xl">
-                    <span class="text-xs font-bold tracking-[0.2em] text-slate-500 uppercase">Defense Engineering // CAD Assembly</span>
-                    <h2 class="text-4xl md:text-6xl font-extrabold mt-4 text-white uppercase tracking-tight">Main Battle Tank</h2>
-                    <p class="text-slate-400 mt-6 leading-relaxed text-lg">
-                        I started building this model back in Year 7 and 8 when I was first getting into CAD. It was my first real attempt at making something that actually looked like a functioning vehicle. Building this forced me to learn how to use constraints properly in Fusion 360 and taught me the basics of how parts fit together.
+    <!-- Desktop Navigation -->
+    <nav class="fixed top-0 left-0 w-full z-[999] bg-[#050505]/80 backdrop-blur-md border-b border-white/5 hidden md:block">
+        <div class="max-w-6xl mx-auto px-8 h-20 flex justify-between items-center">
+            <a href="/" class="flex items-center gap-3 cursor-pointer">
+                <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center font-extrabold text-sm shadow-[0_0_15px_rgba(59,130,246,0.5)] text-white">A</div>
+                <span class="font-extrabold text-sm tracking-widest uppercase text-white">Anvit Tengse</span>
+            </a>
+            <div class="flex gap-10 items-center">
+                <a href="/" class="nav-link text-xs font-bold uppercase tracking-widest text-slate-400 hover:text-white">Home</a>
+                <a href="/interests/" class="nav-link text-xs font-bold uppercase tracking-widest text-slate-400 hover:text-white">Interests</a>
+                <a href="/projects/" class="nav-link active text-xs font-bold uppercase tracking-widest text-white">Projects</a>
+                <a href="/photography/" class="nav-link text-xs font-bold uppercase tracking-widest text-slate-400 hover:text-white">Photography</a>
+                <a href="/contact/" class="text-xs font-bold uppercase tracking-widest text-blue-500 border border-blue-500/30 px-4 py-2 rounded-full hover:bg-blue-500/10 transition-all">Contact Me</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Mobile Navigation -->
+    <nav class="fixed bottom-6 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-md z-[999] bg-[#09090b]/80 backdrop-blur-lg border border-white/10 rounded-2xl md:hidden shadow-[0_10px_30px_rgba(0,0,0,0.5)]">
+        <div class="flex justify-around items-center h-16 px-2">
+            <a href="/" class="flex flex-col items-center gap-1 text-slate-400 hover:text-white transition-colors">
+                <i data-lucide="home" class="w-5 h-5"></i>
+                <span class="text-[9px] font-bold uppercase tracking-wider">Home</span>
+            </a>
+            <a href="/interests/" class="flex flex-col items-center gap-1 text-slate-400 hover:text-white transition-colors">
+                <i data-lucide="compass" class="w-5 h-5"></i>
+                <span class="text-[9px] font-bold uppercase tracking-wider">Interests</span>
+            </a>
+            <a href="/projects/" class="flex flex-col items-center gap-1 text-blue-500">
+                <i data-lucide="folder-git-2" class="w-5 h-5"></i>
+                <span class="text-[9px] font-bold uppercase tracking-wider">Projects</span>
+            </a>
+            <a href="/photography/" class="flex flex-col items-center gap-1 text-slate-400 hover:text-white transition-colors">
+                <i data-lucide="camera" class="w-5 h-5"></i>
+                <span class="text-[9px] font-bold uppercase tracking-wider">Photos</span>
+            </a>
+            <a href="/contact/" class="flex flex-col items-center gap-1 text-slate-400 hover:text-white transition-colors">
+                <i data-lucide="mail" class="w-5 h-5"></i>
+                <span class="text-[9px] font-bold uppercase tracking-wider">Contact</span>
+            </a>
+        </div>
+    </nav>
+
+    <div class="pt-12 md:pt-20 pb-24 md:pb-0">
+        <main class="page-fade">
+            <section class="py-20 px-6 md:px-8 max-w-4xl mx-auto">
+                
+                <!-- Header Title Section -->
+                <div class="mb-12">
+                    <span class="stat-label uppercase tracking-widest text-blue-500 text-xs font-bold">Projects // CAD Assembly</span>
+                    <h2 class="text-5xl md:text-7xl font-extrabold mt-4 text-white uppercase tracking-tight">Main Battle Tank</h2>
+                    <p class="text-slate-400 mt-6 max-w-2xl leading-relaxed text-base md:text-lg">
+                        A parametric solid modeling project executed entirely within Year 8 to self-teach the core principles of component architecture and mechanical constraints.
                     </p>
                 </div>
-            </div>
 
-            <div class="overflow-hidden rounded-[2.5rem] mb-16 aspect-[16/9] relative w-full bg-[#0a0a0a] border border-white/5 shadow-2xl">
-                <model-viewer 
-                    src="../../models/tank.glb" 
-                    alt="MBT 3D Production Geometry Assembly"
-                    camera-controls 
-                    auto-rotate 
-                    rotation-per-second="15deg"
-                    interaction-prompt="none"
-                    camera-orbit="45deg 75deg 105%"
-                    field-of-view="30deg"
-                    shadow-intensity="2.5" 
-                    exposure="1.4"
-                    environment-image="neutral"
-                    style="width: 100%; height: 100%;" 
-                    class="cursor-grab">
-                    <div slot="poster" class="absolute inset-0 flex flex-col items-center justify-center bg-[#0a0a0a]">
-                        <span class="text-[10px] font-mono text-slate-500 uppercase tracking-[0.3em]">Loading CAD Model...</span>
+                <!-- Interactive 3D Model Frame -->
+                <div class="overflow-hidden rounded-[2.5rem] mb-20 aspect-[16/9] relative w-full bg-[#0a0a0a] border border-white/5 shadow-2xl group hover:border-blue-500/20 transition-all">
+                    <model-viewer 
+                        src="../../models/tank.glb" 
+                        alt="Main Battle Tank 3D CAD Model Assembly"
+                        camera-controls 
+                        auto-rotate 
+                        rotation-per-second="12deg"
+                        interaction-prompt="none"
+                        camera-orbit="45deg 75deg 105%"
+                        field-of-view="30deg"
+                        shadow-intensity="2" 
+                        exposure="1.3"
+                        environment-image="neutral"
+                        style="width: 100%; height: 100%;" 
+                        class="cursor-grab">
+                        
+                        <div slot="poster" class="absolute inset-0 flex flex-col items-center justify-center bg-[#0a0a0a]">
+                            <div class="w-8 h-8 border-2 border-blue-500/20 border-t-blue-500 rounded-full animate-spin mb-4"></div>
+                            <span class="text-[10px] font-mono text-slate-500 uppercase tracking-[0.3em]">Loading 3D Production Geometry...</span>
+                        </div>
+                    </model-viewer>
+                </div>
+
+                <!-- Project Lifecycle Section (Executed entirely in Year 8) -->
+                <div class="space-y-12 relative before:absolute before:inset-0 before:left-7 before:translate-x-px before:h-full before:w-0.5 before:bg-gradient-to-b before:from-blue-600/50 before:via-blue-600/10 before:to-transparent">
+                    
+                    <!-- Box 1: Conceptualisation -->
+                    <div class="relative pl-16 group">
+                        <div class="absolute left-0 top-2 w-14 h-14 bg-[#050505] border border-white/10 rounded-2xl flex items-center justify-center z-10 group-hover:border-blue-500/50 transition-colors">
+                            <i data-lucide="layout-grid" class="w-6 h-6 text-red-500"></i>
+                        </div>
+                        
+                        <div class="content-card bg-[#0a0a0a] border border-white/5 p-8 md:p-10 rounded-[2.5rem] hover:border-blue-500/30 transition-all">
+                            <div class="flex justify-between items-start mb-6">
+                                <span class="tag-clean text-blue-500">Phase I // Exploration</span>
+                                <span class="text-[10px] font-mono text-slate-600 uppercase">Year 8 // Start</span>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4 text-white">Interface initialization.</h3>
+                            <p class="text-slate-400 leading-relaxed text-sm md:text-base">
+                                To establish a baseline proficiency in modern solid modeling, I initiated this project as a rigorous, self-directed engineering exercise. Having no prior training in Autodesk Fusion 360, the immediate objective was translating physical vehicle design theory into clean, two-dimensional sketch planes. This initial phase involved adapting to the environment's software mechanics, managing user interface properties, and mastering primary extrusion methods to isolate structural mass blocks.
+                            </p>
+                        </div>
                     </div>
-                </model-viewer>
-            </div>
 
-            <div class="max-w-3xl mx-auto space-y-12 mb-20">
-                <div class="border-t border-white/5 pt-12">
-                    <div class="flex items-center gap-4 mb-6"><div class="w-10 h-10 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-500"><i data-lucide="shield" class="w-5 h-5"></i></div><h3 class="text-xl font-bold uppercase tracking-wider">Sloped Glacis</h3></div>
-                    <p class="text-slate-400 leading-relaxed text-lg">Line-of-Sight thickness validation across primary forward glacis sectors to maximize geometric deflection profiles against incoming ballistics.</p>
+                    <!-- Box 2: Parametric Constraints -->
+                    <div class="relative pl-16 group">
+                        <div class="absolute left-0 top-2 w-14 h-14 bg-[#050505] border border-white/10 rounded-2xl flex items-center justify-center z-10 group-hover:border-blue-500/50 transition-colors">
+                            <i data-lucide="git-commit" class="w-6 h-6 text-blue-500"></i>
+                        </div>
+                        
+                        <div class="content-card bg-[#0a0a0a] border border-white/5 p-8 md:p-10 rounded-[2.5rem] hover:border-blue-500/30 transition-all">
+                            <div class="flex justify-between items-start mb-6">
+                                <span class="tag-clean text-blue-500">Phase II // Optimization</span>
+                                <span class="text-[10px] font-mono text-slate-600 uppercase">Year 8 // Mid</span>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4 text-white">Constraint infrastructure.</h3>
+                            <p class="text-slate-400 leading-relaxed text-sm md:text-base">
+                                Progressing past simple drafting required a complete structural pivot toward strict parametric constraints. I utilized this phase to master dimensional dependencies, ensuring that variations in core chassis specifications would not cause fatal errors across the timeline. By implementing localized component mapping and mechanical joint linkages, I synchronized the unmanned turret ring assembly with the hull configuration, completely eliminating intersecting solid boundaries.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Box 3: Final Geometry -->
+                    <div class="relative pl-16 group">
+                        <div class="absolute left-0 top-2 w-14 h-14 bg-[#050505] border border-white/10 rounded-2xl flex items-center justify-center z-10 group-hover:border-emerald-500/50 transition-colors">
+                            <i data-lucide="shield-check" class="w-6 h-6 text-emerald-500"></i>
+                        </div>
+                        
+                        <div class="content-card bg-[#0a0a0a] border border-white/5 p-8 md:p-10 rounded-[2.5rem] hover:border-emerald-500/30 transition-all">
+                            <div class="flex justify-between items-start mb-6">
+                                <span class="tag-clean text-emerald-500">Phase III // Execution</span>
+                                <span class="text-[10px] font-mono text-slate-600 uppercase">Year 8 // Completed</span>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4 text-white">Production validation.</h3>
+                            <p class="text-slate-400 leading-relaxed text-sm md:text-base">
+                                The final development tier concluded within Year 8, focusing on engineering refinement and ballistic profile integrity. The design optimizes line-of-sight protection thickness across the sloped glacis array and integrates an isolated ammunition mechanical bay. Completing this entire engineering cycle as a standalone exercise successfully established the spatial reasoning and parametric mastery required to tackle advanced aeronautical design challenges.
+                            </p>
+                        </div>
+                    </div>
+
                 </div>
-                <div class="border-t border-white/5 pt-12">
-                    <div class="flex items-center gap-4 mb-6"><div class="w-10 h-10 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-500"><i data-lucide="crosshair" class="w-5 h-5"></i></div><h3 class="text-xl font-bold uppercase tracking-wider">Unmanned Turret</h3></div>
-                    <p class="text-slate-400 leading-relaxed text-lg">Reduced vertical cross-section configuration with isolated weapon mechanical sweeps and external integrated sensor module pods.</p>
-                </div>
-                <div class="border-t border-white/5 pt-12">
-                    <div class="flex items-center gap-4 mb-6"><div class="w-10 h-10 bg-blue-500/10 rounded-xl flex items-center justify-center text-blue-500"><i data-lucide="zap" class="w-5 h-5"></i></div><h3 class="text-xl font-bold uppercase tracking-wider">Chassis Integration</h3></div>
-                    <p class="text-slate-400 leading-relaxed text-lg">Track protection configuration tracking lines paired with an independent roof platform station and utility defensive mortar layout placements.</p>
-                </div>
-            </div>
-        </section>
+            </section>
+        </main>
     </div>
-    <script>lucide.createIcons();</script>
+
+    <!-- Footer Area -->
+    <footer class="py-20 px-8 border-t border-white/5 bg-[#010204]">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
+            <div class="flex items-center gap-3">
+                <div class="w-6 h-6 bg-blue-600/20 rounded flex items-center justify-center font-bold text-[10px] text-blue-500">A</div>
+                <span class="text-[10px] font-bold tracking-[0.3em] uppercase text-slate-500">Anvit Tengse // Projects // MBT</span>
+            </div>
+            <div class="flex gap-10">
+                <a href="https://github.com/FeelingPrism" target="_blank"><i data-lucide="github" class="w-5 h-5 text-slate-600 hover:text-white cursor-pointer transition-colors"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
 </body>
 </html>
